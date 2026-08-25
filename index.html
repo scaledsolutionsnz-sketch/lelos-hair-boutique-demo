@@ -237,9 +237,12 @@ h1,h2,h3{font-weight:400;line-height:1.05}
    in frame rather than the 16/9 slot that cut the length off */
 .well__wide .plate{aspect-ratio:3/2}
 .well__wide .plate img{object-position:50% 24%}
-.well__wide .plate.room{aspect-ratio:2/1}
+/* both of these are true landscape frames, so show them whole */
+.well__wide .plate.opener{aspect-ratio:16/9}
+.well__wide .plate.opener img{object-position:50% 42%}
+.well__wide .plate.room{aspect-ratio:16/9}
 .well__wide .plate.room img{object-position:50% 50%}
-@media (max-width:700px){.well__wide .plate.room{aspect-ratio:4/3}}
+@media (max-width:700px){.well__wide .plate.room,.well__wide .plate.opener{aspect-ratio:4/3}}
 .well__wide .cap{width:min(1240px,100% - (var(--gut) * 2));margin-inline:auto}
 @media (max-width:700px){.well__wide .plate{aspect-ratio:4/5}}
 
@@ -462,8 +465,8 @@ h1,h2,h3{font-weight:400;line-height:1.05}
   <div class="well">
 
     <div class="well__wide">
-      <figure class="plate"><img src="img/work-3.jpg" alt="Long brunette balayage brushed out and photographed against the studio's floral wall" width="900" height="1125" loading="lazy" decoding="async"></figure>
-      <figcaption class="cap beat"><span class="cap__n">Colour</span><span class="cap__t">Lived-in brunette balayage, brushed out at the bench. Depth kept at the root so it grows out soft instead of banding.</span></figcaption>
+      <figure class="plate opener"><img src="img/hero-1.jpg" alt="Long blonde curls with lived-in balayage, photographed against the flowering garden wall outside the studio" width="1900" height="1069" fetchpriority="low" decoding="async"></figure>
+      <figcaption class="cap beat"><span class="cap__n">Colour</span><span class="cap__t">Lived-in blonde, curled out and shot against the garden wall the studio backs onto. Depth kept through the root so it grows out soft instead of banding.</span></figcaption>
     </div>
 
     <div class="col">
@@ -493,12 +496,12 @@ h1,h2,h3{font-weight:400;line-height:1.05}
     <div class="col">
       <div class="well__two">
         <div>
-          <figure class="plate"><img src="img/work-5.jpg" alt="Occasion styling finished in the salon lounge" width="900" height="1125" loading="lazy" decoding="async"></figure>
-          <figcaption class="cap beat"><span class="cap__n">Occasion</span><span class="cap__t">Occasion styling, finished in the lounge.</span></figcaption>
+          <figure class="plate"><img src="img/work-3.jpg" alt="Long brunette balayage brushed out against the studio's floral wall" width="900" height="1125" loading="lazy" decoding="async"></figure>
+          <figcaption class="cap beat"><span class="cap__n">Colour</span><span class="cap__t">Brunette balayage, brushed out at the bench.</span></figcaption>
         </div>
         <div>
-          <figure class="plate"><img src="img/svc-treatments.jpg" alt="Glossy blonde waves photographed after a colour and bond treatment" width="1200" height="1200" loading="lazy" decoding="async"></figure>
-          <figcaption class="cap beat"><span class="cap__n">Colour</span><span class="cap__t">Blonde, toned and treated back to condition.</span></figcaption>
+          <figure class="plate"><img src="img/work-5.jpg" alt="Occasion styling finished in the salon lounge" width="900" height="1125" loading="lazy" decoding="async"></figure>
+          <figcaption class="cap beat"><span class="cap__n">Occasion</span><span class="cap__t">Occasion styling, finished in the lounge.</span></figcaption>
         </div>
       </div>
     </div>
@@ -510,12 +513,17 @@ h1,h2,h3{font-weight:400;line-height:1.05}
 <section class="sec sec--tight">
   <div class="col">
     <div class="award">
-      <figure class="plate"><img src="img/work-6.jpg" alt="New Zealand Association of Registered Hairdressers award trophies on the shelf in the salon" width="900" height="1125" loading="lazy" decoding="async"></figure>
+      <figure class="plate"><img src="img/work-6.jpg" alt="Three NZARH winner trophies on the timber bench in the salon, engraved with the event, category, region and year" width="900" height="1125" loading="lazy" decoding="async"></figure>
       <div class="beat">
         <span class="lbl">On the shelf</span>
         <h2>The trophies<br>are real</h2>
-        <p class="say">Lelo is an award recognised senior stylist through the New Zealand Association of Registered Hairdressers. The trophies sit in the studio, and you are welcome to pick them up.</p>
-        <p class="say" style="margin-top:.9rem">It matters for one reason: colour correction and bridal work are the two jobs where experience is the difference between a good day and an expensive fix.</p>
+        <p class="say">Three NZARH wins, sitting on the bench in the studio. They are engraved, you are welcome to pick them up, and they say this:</p>
+        <ul class="facts" style="margin-top:1.4rem">
+          <li><span>2016</span><span>Hair by Night Live Event, New Generation Stylist, Canterbury and Westland</span></li>
+          <li><span>2016</span><span>The Day Style Live Event, New Generation Stylist, Canterbury and Westland</span></li>
+          <li><span>2014</span><span>Urban Night Hair, Newcomer, Nelson and Marlborough</span></li>
+        </ul>
+        <p class="say" style="margin-top:1.4rem">It matters for one reason. Colour correction and bridal work are the two jobs where experience is the difference between a good day and an expensive fix.</p>
       </div>
     </div>
   </div>
@@ -591,8 +599,8 @@ h1,h2,h3{font-weight:400;line-height:1.05}
 <section class="sec sec--tight">
   <div class="well">
     <div class="well__wide">
-      <figure class="plate room"><img src="img/hero-2.jpg" alt="Inside the garden studio: the styling chair, mirror and plants at Lelo's Hair Boutique" width="1900" height="1069" loading="lazy" decoding="async"></figure>
-      <figcaption class="cap beat"><span class="cap__n">The room</span><span class="cap__t">The studio on Royal Park Drive. One chair, the garden through the window, and nobody else booked in while you are in it.</span></figcaption>
+      <figure class="plate room"><img src="img/hero-3.jpg" alt="Inside the garden studio: a single styling chair and round mirror, the basin on a timber bench, plants throughout, and a window opening onto the garden" width="1900" height="1069" loading="lazy" decoding="async"></figure>
+      <figcaption class="cap beat"><span class="cap__n">The room</span><span class="cap__t">The studio on Royal Park Drive. One chair, one basin, the garden through the window, and nobody else booked in while you are sitting in it.</span></figcaption>
     </div>
   </div>
 </section>

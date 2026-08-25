@@ -80,7 +80,7 @@ Explicit absences that must not be fabricated:
 
 - **No real Google reviews yet.** The testimonials currently on the site are written examples and are labelled as such. They must stay labelled, or be removed, until real ones exist.
 - **No verified star rating or review count.** The incumbent site shows "5.0, loved by local clients" with no substantiation; treat this as unverified.
-- **No specific award name, category or year** has been confirmed beyond the NZARH trophies visible in the photograph.
+- Award specifics ARE confirmed, read directly off the engraving in `work-6.jpg`: NZARH winner, Hair by Night Live Event, New Generation Stylist, Canterbury/Westland 2016; NZARH winner, The Day Style Live Event, New Generation Stylist, Canterbury/Westland 2016; NZARH winner, Urban Night Hair, Newcomer, Nelson/Marlborough 2014. Worth confirming the exact wording with Lelo before launch, since one trophy is partly obscured in the photo.
 - No prices, no client names, no case studies.
 
 ## Product Principles
