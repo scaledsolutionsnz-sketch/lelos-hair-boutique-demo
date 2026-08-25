@@ -237,6 +237,9 @@ h1,h2,h3{font-weight:400;line-height:1.05}
    in frame rather than the 16/9 slot that cut the length off */
 .well__wide .plate{aspect-ratio:3/2}
 .well__wide .plate img{object-position:50% 24%}
+.well__wide .plate.room{aspect-ratio:2/1}
+.well__wide .plate.room img{object-position:50% 50%}
+@media (max-width:700px){.well__wide .plate.room{aspect-ratio:4/3}}
 .well__wide .cap{width:min(1240px,100% - (var(--gut) * 2));margin-inline:auto}
 @media (max-width:700px){.well__wide .plate{aspect-ratio:4/5}}
 
@@ -580,6 +583,16 @@ h1,h2,h3{font-weight:400;line-height:1.05}
           <li><span>Booking</span><span>By phone or email, no online system</span></li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE ROOM ================= -->
+<section class="sec sec--tight">
+  <div class="well">
+    <div class="well__wide">
+      <figure class="plate room"><img src="img/hero-2.jpg" alt="Inside the garden studio: the styling chair, mirror and plants at Lelo's Hair Boutique" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+      <figcaption class="cap beat"><span class="cap__n">The room</span><span class="cap__t">The studio on Royal Park Drive. One chair, the garden through the window, and nobody else booked in while you are in it.</span></figcaption>
     </div>
   </div>
 </section>
