@@ -201,7 +201,7 @@ h1,h2,h3{font-weight:400;line-height:1.05}
 .cover__rail span b{font-variation-settings:'wdth' 100,'wght' 800;color:var(--chalk);font-weight:inherit}
 .cover__foot{position:relative;z-index:2;border-top:1px solid var(--rule);margin:.9rem var(--gut) 0;padding:.7rem 0 .85rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;justify-content:space-between}
 @media (max-width:820px){
-  .cover__body{grid-template-columns:1fr;gap:1.4rem}
+  .cover__body{grid-template-columns:minmax(0,1fr);gap:1.4rem}
   .cover__rail{justify-items:start;text-align:left;border-top:1px solid var(--rule-soft);padding-top:.9rem}
   .cover__mast{width:min(210px,50vw);margin-inline:0}
   .cover__plate img{object-position:60% 22%}
