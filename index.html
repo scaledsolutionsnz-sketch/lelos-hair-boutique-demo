@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lelo's Hair Boutique | Hair Salon, Parklands, Christchurch</title>
-<meta name="description" content="Lelo's Hair Boutique — colour, cuts, treatments and occasion hair in Parklands, Christchurch. Award-winning senior stylist, open 7 days.">
+<meta name="description" content="Lelo's Hair Boutique, colour, cuts, treatments and occasion hair in Parklands, Christchurch. Award-winning senior stylist, open 7 days.">
 <meta property="og:title" content="Lelo's Hair Boutique | Hair Salon, Parklands, Christchurch">
-<meta property="og:description" content="Colour, cuts, treatments and occasion hair in a boutique garden salon. Open 7 days, 9am–6pm.">
-<meta property="og:image" content="https://lelos-hair-boutique-demo.vercel.app/img/hero-2.jpg">
+<meta property="og:description" content="Colour, cuts, treatments and occasion hair in a boutique garden salon. Open 7 days, 9am to 6pm.">
+<meta property="og:image" content="https://lelos-hair-boutique-demo.vercel.app/img/hero-1.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23a8402a'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='34' fill='%23f7f0e8' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,6 +36,14 @@ h1,h2,h3{font-family:'Italiana',serif;font-weight:400;line-height:1.12}
 .eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--terra)}
 .eyebrow::before{content:"";width:26px;height:1px;background:var(--terra)}
 .section{padding:clamp(4rem,9vw,6.5rem) 0}
+/* recent work */
+.work{background:var(--blush,#fbf5f0)}
+.work-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.work-tile{position:relative;overflow:hidden;border-radius:14px;background:#efe6de;aspect-ratio:4/5}
+.work-tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.22,.61,.36,1)}
+.work-tile:hover img{transform:scale(1.05)}
+@media (max-width:960px){.work-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.work-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
 .section-head{max-width:620px;margin-bottom:clamp(2.2rem,5vw,3.4rem)}
 .section-head h2{font-size:clamp(2.1rem,5.4vw,3.1rem);margin:.55rem 0 .8rem}
 .section-head p{color:rgba(34,23,19,.72)}
@@ -52,7 +60,9 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .35
 header.solid{background:rgba(31,20,16,.92);backdrop-filter:blur(12px);box-shadow:0 6px 24px rgba(0,0,0,.18)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;color:var(--bone)}
 .brand{display:flex;align-items:center;gap:.65rem;font-family:'Italiana',serif;font-size:1.35rem;letter-spacing:.04em}
-.brand .dot{width:34px;height:34px;border-radius:50%;background:var(--terra);display:flex;align-items:center;justify-content:center;font-size:1.05rem;color:var(--bone);flex-shrink:0}
+.brand-logo{height:56px;width:auto;display:block}
+.brand-logo--foot{height:38px}
+@media (max-width:600px){.brand-logo{height:44px}}
 .nav-links{display:flex;align-items:center;gap:1.9rem;list-style:none}
 .nav-links a{font-size:.92rem;font-weight:500;color:rgba(247,241,234,.85);transition:color .2s}
 .nav-links a:hover{color:#fff}
@@ -215,10 +225,11 @@ footer{background:var(--espresso-deep);color:rgba(247,241,234,.7);padding:2.6rem
 <header id="header">
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="Lelo's Hair Boutique home">
-      <span class="dot">L</span> Lelo's Hair Boutique
+      <img class="brand-logo" src="img/logo.png" alt="Lelo's Hair Boutique" width="563" height="388">
     </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
+      <li><a href="#work">Our work</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -254,12 +265,12 @@ footer{background:var(--espresso-deep);color:rgba(247,241,234,.7);padding:2.6rem
   <div class="hero-slides" aria-hidden="true">
     <div class="slide on" style="background-image:url('img/hero-1.jpg')"></div>
     <div class="slide" data-src="img/hero-2.jpg"></div>
-    <div class="slide" data-src="img/hero-wash.jpg"></div>
+    <div class="slide" data-src="img/hero-3.jpg"></div>
   </div>
   <div class="wrap hero-inner">
     <span class="eyebrow" style="color:var(--terra-soft)">Hair Salon &middot; Parklands, Christchurch</span>
     <h1>Colour, cuts &amp; occasion hair, done beautifully.</h1>
-    <p class="lead">A boutique garden salon on Royal Park Drive where every appointment is one-on-one — colour and cut specialists, with wedding styling on site.</p>
+    <p class="lead">A boutique garden salon on Royal Park Drive where every appointment is one-on-one, colour and cut specialists, with wedding styling on site.</p>
     <div class="hero-ctas">
       <a class="btn btn-terra" href="tel:+6421484948">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -296,7 +307,7 @@ footer{background:var(--espresso-deep);color:rgba(247,241,234,.7);padding:2.6rem
     </div>
     <div class="trust-item fade-up">
       <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
-      <div><h3>One-on-one boutique care</h3><p>A private garden-studio setting — your appointment, your time.</p></div>
+      <div><h3>One-on-one boutique care</h3><p>A private garden-studio setting. Your appointment, your time.</p></div>
     </div>
   </div>
 </section>
@@ -307,48 +318,66 @@ footer{background:var(--espresso-deep);color:rgba(247,241,234,.7);padding:2.6rem
     <div class="section-head">
       <span class="eyebrow">What we do</span>
       <h2>Services at the boutique</h2>
-      <p>Every strand is a canvas — colour, cuts, treatments and styling for the moments that matter.</p>
+      <p>Every strand is a canvas. Colour, cuts, treatments and styling for the moments that matter.</p>
     </div>
     <div class="svc-grid">
       <article class="svc-card">
-        <div class="ph"><img src="img/svc-womens.jpg" alt="Stylist finishing a woman's haircut with a dryer and brush" width="1200" height="801" loading="lazy"></div>
+        <div class="ph"><img src="img/svc-womens.jpg" alt="Blonde balayage finished and styled in the salon chair" width="1100" height="825" loading="lazy"></div>
         <div class="body"><h3>Women's Cut &amp; Style</h3><p>Precision cuts shaped to your face, your hair type and how you actually wear it day to day.</p></div>
       </article>
       <article class="svc-card">
-        <div class="ph"><img src="img/svc-colour.jpg" alt="Finished pastel violet hair colour on long wavy hair" width="1200" height="1200" loading="lazy"></div>
-        <div class="body"><h3>Hair Colouring</h3><p>Full colour, foils, balayage and creative tones — mixed and matched to suit your skin and style.</p></div>
+        <div class="ph"><img src="img/svc-colour.jpg" alt="Long brunette balayage brushed out at the styling bench" width="1200" height="1200" loading="lazy"></div>
+        <div class="body"><h3>Hair Colouring</h3><p>Full colour, foils, balayage and creative tones, mixed and matched to suit your skin and style.</p></div>
       </article>
       <article class="svc-card">
-        <div class="ph"><img src="img/svc-mens.jpg" alt="Clippers, scissors and comb laid out for a men's haircut" width="1200" height="800" loading="lazy"></div>
-        <div class="body"><h3>Men's Cut</h3><p>Sharp, tidy men's cuts without the rush — walk out looking freshly finished, not just trimmed.</p></div>
+        <div class="ph"><img src="img/svc-mens.jpg" alt="The styling chair and mirror inside the garden salon" width="1200" height="800" loading="lazy"></div>
+        <div class="body"><h3>Men's Cut</h3><p>Sharp, tidy men's cuts without the rush. Walk out looking freshly finished, not just trimmed.</p></div>
       </article>
       <article class="svc-card">
-        <div class="ph"><img src="img/svc-treatments.jpg" alt="Healthy defined curls after a nourishing hair treatment" width="1200" height="1200" loading="lazy"></div>
+        <div class="ph"><img src="img/svc-treatments.jpg" alt="Glossy blonde waves after a colour and treatment" width="1200" height="1200" loading="lazy"></div>
         <div class="body"><h3>Hair Treatments</h3><p>Deep conditioning and repair treatments that bring tired, coloured or curly hair back to life.</p></div>
       </article>
       <article class="svc-card">
-        <div class="ph"><img src="img/svc-blowdry.jpg" alt="Stylist blow drying hair with a round brush" width="1200" height="801" loading="lazy"></div>
-        <div class="body"><h3>Blow Dry &amp; Finish</h3><p>A proper blow wave that holds — perfect before a night out or just because it's Friday.</p></div>
+        <div class="ph"><img src="img/svc-blowdry.jpg" alt="Fresh blow wave finished in the salon cape" width="1100" height="825" loading="lazy"></div>
+        <div class="body"><h3>Blow Dry &amp; Finish</h3><p>A proper blow wave that holds, perfect before a night out or just because it's Friday.</p></div>
       </article>
       <article class="svc-card">
-        <div class="ph"><img src="img/svc-occasion.jpg" alt="Curling iron styling soft waves for a special occasion" width="1200" height="2136" loading="lazy"></div>
-        <div class="body"><h3>Wedding &amp; Occasion Hair</h3><p>Bridal and event styling, with weddings catered for on site — relaxed, unhurried and beautiful.</p></div>
+        <div class="ph"><img src="img/svc-occasion.jpg" alt="Bridal updo being set with a veil on the day" width="1200" height="2136" loading="lazy"></div>
+        <div class="body"><h3>Wedding &amp; Occasion Hair</h3><p>Bridal and event styling, with weddings catered for on site, relaxed, unhurried and beautiful.</p></div>
       </article>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
+<section class="section work" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Recent work</span>
+      <h2>Straight from the chair</h2>
+      <p>Colour, occasion styling and wedding hair finished at the boutique, and the awards that came with it.</p>
+    </div>
+    <div class="work-grid">
+      <figure class="work-tile"><img src="img/work-1.jpg" alt="Half-up bridal style dressed with dried flowers" width="900" height="1125" loading="lazy" decoding="async"></figure>
+      <figure class="work-tile"><img src="img/work-2.jpg" alt="Low bridal updo finished at the styling bench" width="900" height="1125" loading="lazy" decoding="async"></figure>
+      <figure class="work-tile"><img src="img/work-3.jpg" alt="Long brunette balayage against the floral wall" width="900" height="1125" loading="lazy" decoding="async"></figure>
+      <figure class="work-tile"><img src="img/work-4.jpg" alt="Bridal party hair styled on the morning of the wedding" width="900" height="1125" loading="lazy" decoding="async"></figure>
+      <figure class="work-tile"><img src="img/work-5.jpg" alt="Occasion styling finished in the salon lounge" width="900" height="1125" loading="lazy" decoding="async"></figure>
+      <figure class="work-tile"><img src="img/work-6.jpg" alt="NZARH award trophies won by the salon" width="900" height="1125" loading="lazy" decoding="async"></figure>
+    </div>
+  </div>
+</section>
+
 <section class="section about" id="about">
   <div class="wrap about-grid">
     <div class="about-photo fade-up">
-      <img src="img/about-lelo.jpg" alt="Lelo seated inside her garden salon at Lelo's Hair Boutique" width="1351" height="765" loading="lazy">
+      <img src="img/about-lelo.jpg" alt="Lelo in her garden salon on Royal Park Drive" width="1351" height="765" loading="lazy">
       <span class="tag">The boutique</span>
     </div>
     <div class="fade-up">
       <span class="eyebrow">About us</span>
       <h2>Where style and sophistication come together</h2>
-      <p>Lelo's Hair Boutique is a private garden salon in Parklands, Christchurch. It's a different pace from a busy high-street salon — one chair, one stylist, and an appointment that's entirely about you.</p>
+      <p>Lelo's Hair Boutique is a private garden salon in Parklands, Christchurch. It's a different pace from a busy high-street salon. One chair, one stylist, and an appointment that's entirely about you.</p>
       <p>From everyday cuts to complete colour transformations and wedding-day styling, every visit ends the same way: walking out feeling confident and transformed.</p>
       <ul class="checks">
         <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Award-winning senior stylist</li>
@@ -372,7 +401,7 @@ footer{background:var(--espresso-deep);color:rgba(247,241,234,.7);padding:2.6rem
         <div>
           <h3>Lelo</h3>
           <div class="role">Owner &amp; Senior Stylist</div>
-          <p>Your stylist from consult to finish — an award-winning senior stylist specialising in colour and cut work.</p>
+          <p>Your stylist from consult to finish, an award-winning senior stylist specialising in colour and cut work.</p>
         </div>
       </div>
       <div class="crew-card fade-up">
@@ -382,7 +411,7 @@ footer{background:var(--espresso-deep);color:rgba(247,241,234,.7);padding:2.6rem
         <div>
           <h3>You, in the chair</h3>
           <div class="role">One-on-one appointments</div>
-          <p>No double-booking, no waiting around — the boutique is yours for the length of your appointment.</p>
+          <p>No double-booking, no waiting around. The boutique is yours for the length of your appointment.</p>
         </div>
       </div>
     </div>
@@ -395,7 +424,7 @@ footer{background:var(--espresso-deep);color:rgba(247,241,234,.7);padding:2.6rem
     <div class="section-head">
       <span class="eyebrow">Kind words</span>
       <h2>What clients say <span class="badge">Example reviews</span></h2>
-      <p>Lelo's Google reviews are just getting started — these example reviews show how this section will look with real ones.</p>
+      <p>Lelo's Google reviews are just getting started. These example reviews show how this section will look with real ones.</p>
     </div>
     <div class="rev-grid">
       <div class="rev-card fade-up">
@@ -409,7 +438,7 @@ footer{background:var(--espresso-deep);color:rgba(247,241,234,.7);padding:2.6rem
         <span class="stars" aria-label="5 stars">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
         </span>
-        <p class="txt">"Booked in for wedding hair for myself and two bridesmaids — Lelo had us all done on site, on time, and it held all night. Couldn't recommend more."</p>
+        <p class="txt">"Booked in for wedding hair for myself and two bridesmaids. Lelo had us all done on site, on time, and it held all night. Couldn't recommend more."</p>
         <div class="rev-meta"><span class="who">Emma T. <span class="where">&middot; New Brighton</span></span></div>
       </div>
       <div class="rev-card fade-up">
@@ -434,7 +463,7 @@ footer{background:var(--espresso-deep);color:rgba(247,241,234,.7);padding:2.6rem
   <div class="wrap">
     <div>
       <h2>Happy with your hair?</h2>
-      <p>A quick Google review helps other locals find the boutique — it takes less than a minute.</p>
+      <p>A quick Google review helps other locals find the boutique, it takes less than a minute.</p>
     </div>
     <a class="btn btn-terra" href="https://www.google.com/maps/search/?api=1&query=Lelo%27s%20Hair%20Boutique%20105%20Royal%20Park%20Drive%20Christchurch" target="_blank" rel="noopener">
       Leave us a review
@@ -449,7 +478,7 @@ footer{background:var(--espresso-deep);color:rgba(247,241,234,.7);padding:2.6rem
     <div>
       <span class="eyebrow" style="color:var(--terra-soft)">Get in touch</span>
       <h2>Book your next appointment</h2>
-      <p class="sub">Call or email to book — or just to talk through the colour you've been thinking about.</p>
+      <p class="sub">Call or email to book, or just to talk through the colour you've been thinking about.</p>
       <div class="c-rows">
         <div class="c-row">
           <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
@@ -506,7 +535,7 @@ footer{background:var(--espresso-deep);color:rgba(247,241,234,.7);padding:2.6rem
 
 <footer>
   <div class="wrap foot">
-    <a class="brand" href="#top"><span class="dot">L</span> Lelo's Hair Boutique</a>
+    <a class="brand" href="#top"><img class="brand-logo brand-logo--foot" src="img/logo.png" alt="Lelo's Hair Boutique" width="563" height="388"></a>
     <div class="foot-links">
       <a href="terms.html">Terms &amp; Conditions</a>
       <a href="privacy.html">Privacy Policy</a>
