@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lelo's Hair Boutique | Hair Salon, Parklands, Christchurch</title>
+<meta name="description" content="Lelo's Hair Boutique — colour, cuts, treatments and occasion hair in Parklands, Christchurch. Award-winning senior stylist, open 7 days.">
+<meta property="og:title" content="Lelo's Hair Boutique | Hair Salon, Parklands, Christchurch">
+<meta property="og:description" content="Colour, cuts, treatments and occasion hair in a boutique garden salon. Open 7 days, 9am–6pm.">
+<meta property="og:image" content="https://lelos-hair-boutique-demo.vercel.app/img/hero-2.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23a8402a'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='34' fill='%23f7f0e8' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#221713;
+  --espresso:#2b1d17;
+  --espresso-deep:#1f1410;
+  --bone:#f7f1ea;
+  --cream:#fdfaf6;
+  --terra:#a8402a;
+  --terra-soft:#c4593f;
+  --line:rgba(34,23,19,.12);
+  --line-light:rgba(247,241,234,.16);
+  --radius:18px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Figtree',sans-serif;font-size:16px;line-height:1.65;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block;image-orientation:from-image}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Italiana',serif;font-weight:400;line-height:1.12}
+.wrap{width:min(1120px,92%);margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--terra)}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--terra)}
+.section{padding:clamp(4rem,9vw,6.5rem) 0}
+.section-head{max-width:620px;margin-bottom:clamp(2.2rem,5vw,3.4rem)}
+.section-head h2{font-size:clamp(2.1rem,5.4vw,3.1rem);margin:.55rem 0 .8rem}
+.section-head p{color:rgba(34,23,19,.72)}
+
+/* ---------- intro overlay ---------- */
+#intro{position:fixed;inset:0;z-index:200;background:var(--espresso-deep);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.9rem;transition:opacity .7s ease,visibility .7s}
+#intro .mark{font-family:'Italiana',serif;font-size:clamp(2rem,7vw,3.4rem);color:var(--bone);letter-spacing:.06em;opacity:0;transform:translateY(14px);animation:introUp .9s .15s ease forwards}
+#intro .sub{font-size:.75rem;letter-spacing:.34em;text-transform:uppercase;color:var(--terra-soft);opacity:0;animation:introUp .9s .45s ease forwards}
+#intro.done{opacity:0;visibility:hidden}
+@keyframes introUp{to{opacity:1;transform:none}}
+
+/* ---------- nav ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .35s,box-shadow .35s}
+header.solid{background:rgba(31,20,16,.92);backdrop-filter:blur(12px);box-shadow:0 6px 24px rgba(0,0,0,.18)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;color:var(--bone)}
+.brand{display:flex;align-items:center;gap:.65rem;font-family:'Italiana',serif;font-size:1.35rem;letter-spacing:.04em}
+.brand .dot{width:34px;height:34px;border-radius:50%;background:var(--terra);display:flex;align-items:center;justify-content:center;font-size:1.05rem;color:var(--bone);flex-shrink:0}
+.nav-links{display:flex;align-items:center;gap:1.9rem;list-style:none}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(247,241,234,.85);transition:color .2s}
+.nav-links a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.7rem;border-radius:999px;font-weight:600;font-size:.95rem;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer}
+.btn svg{flex-shrink:0}
+.btn-terra{background:var(--terra);color:#fff}
+.btn-terra:hover{background:var(--terra-soft);transform:translateY(-2px);box-shadow:0 10px 24px rgba(168,64,42,.35)}
+.btn-ghost{border:1px solid rgba(247,241,234,.5);color:var(--bone)}
+.btn-ghost:hover{background:rgba(247,241,234,.12);transform:translateY(-2px)}
+.btn-dark{background:var(--espresso);color:var(--bone)}
+.btn-dark:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(43,29,23,.3)}
+.nav-call{display:none}
+.burger{display:none;background:none;border:0;width:48px;height:48px;cursor:pointer;color:var(--bone)}
+.mobile-menu{display:none}
+@media (min-width:861px){.nav-call{display:inline-flex}}
+@media (max-width:860px){
+  .nav-links{display:none}
+  .burger{display:flex;align-items:center;justify-content:center}
+  .mobile-menu{display:block;position:fixed;top:0;right:0;bottom:0;width:min(320px,84vw);background:var(--espresso-deep);z-index:150;padding:5.2rem 2rem 2rem;transform:translateX(100%);transition:transform .35s ease}
+  .mobile-menu.open{transform:none}
+  .mobile-menu a{display:block;padding:.85rem 0;font-size:1.08rem;color:var(--bone);border-bottom:1px solid var(--line-light)}
+  .mobile-menu .btn{margin-top:1.4rem;width:100%}
+  .menu-close{position:absolute;top:1rem;right:1rem;background:none;border:0;width:48px;height:48px;color:var(--bone);cursor:pointer}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--espresso-deep);color:var(--bone);overflow:hidden}
+.hero-slides{position:absolute;inset:0}
+.hero-slides .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.6s ease;transform:scale(1.04)}
+.hero-slides .slide.on{opacity:1;animation:slowZoom 9s linear forwards}
+@keyframes slowZoom{from{transform:scale(1.04)}to{transform:scale(1.0)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,20,16,.62) 0%,rgba(31,20,16,.5) 45%,rgba(31,20,16,.78) 100%)}
+.hero-inner{position:relative;z-index:2;padding:7.5rem 0 4.5rem}
+.hero h1{font-size:clamp(2.6rem,7.6vw,4.6rem);max-width:14ch;margin:.9rem 0 1.1rem}
+.hero p.lead{max-width:46ch;font-size:1.06rem;color:rgba(247,241,234,.88);font-weight:300}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.9rem}
+.hero-rating{margin-top:2.1rem;display:inline-flex;align-items:center;gap:.8rem;padding:.75rem 1.15rem;border-radius:14px;background:rgba(247,241,234,.1);backdrop-filter:blur(10px);border:1px solid rgba(247,241,234,.22);font-size:.9rem}
+.stars{display:inline-flex;gap:2px;color:#e8b04b}
+.hero-scroll{position:absolute;bottom:1.6rem;left:50%;transform:translateX(-50%);z-index:2;color:rgba(247,241,234,.6);animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+/* ---------- trust strip ---------- */
+.trust{background:var(--bone);border-bottom:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;padding:1.9rem 0}
+.trust-item{display:flex;gap:.95rem;align-items:flex-start}
+.trust-item .ic{width:44px;height:44px;border-radius:12px;background:rgba(168,64,42,.1);color:var(--terra);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trust-item h3{font-family:'Figtree',sans-serif;font-weight:700;font-size:.98rem;margin-bottom:.15rem}
+.trust-item p{font-size:.88rem;color:rgba(34,23,19,.66)}
+@media (max-width:760px){.trust .wrap{grid-template-columns:1fr;gap:1.1rem}}
+
+/* ---------- services ---------- */
+.services{background:var(--cream)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.svc-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .3s,box-shadow .3s;opacity:0;transform:translateY(26px)}
+.svc-card.reveal{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease,box-shadow .3s}
+.svc-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(43,29,23,.12)}
+.svc-card .ph{aspect-ratio:16/11;overflow:hidden}
+.svc-card .ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.88) contrast(1.04);transition:transform .5s ease}
+.svc-card:hover .ph img{transform:scale(1.05)}
+.svc-card .body{padding:1.35rem 1.4rem 1.5rem}
+.svc-card h3{font-size:1.45rem;margin-bottom:.4rem}
+.svc-card p{font-size:.92rem;color:rgba(34,23,19,.68)}
+@media (max-width:960px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.svc-grid{grid-template-columns:1fr}}
+
+/* ---------- about ---------- */
+.about{background:var(--bone)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.about-photo{position:relative}
+.about-photo img{border-radius:var(--radius);width:100%;aspect-ratio:4/3;object-fit:cover;filter:saturate(.9) contrast(1.03)}
+.about-photo .tag{position:absolute;left:-1px;bottom:-1px;background:var(--terra);color:#fff;padding:.7rem 1.25rem;border-radius:0 var(--radius) 0 var(--radius);font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.about h2{font-size:clamp(2.1rem,5vw,3rem);margin:.55rem 0 1rem}
+.about p{color:rgba(34,23,19,.74);margin-bottom:1rem}
+.checks{list-style:none;margin-top:1.4rem;display:grid;gap:.8rem}
+.checks li{display:flex;gap:.8rem;align-items:flex-start;font-weight:500}
+.checks .ck{width:24px;height:24px;border-radius:50%;background:var(--terra);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr}}
+
+/* ---------- crew ---------- */
+.crew{background:var(--cream)}
+.crew-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem;max-width:820px}
+.crew-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.9rem 1.7rem;display:flex;gap:1.2rem;align-items:center;transition:transform .3s,box-shadow .3s}
+.crew-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(43,29,23,.1)}
+.avatar{width:64px;height:64px;border-radius:50%;background:var(--espresso);color:var(--bone);display:flex;align-items:center;justify-content:center;font-family:'Italiana',serif;font-size:1.5rem;border:2px solid var(--terra);flex-shrink:0}
+.crew-card h3{font-family:'Figtree',sans-serif;font-size:1.05rem;font-weight:700}
+.crew-card .role{color:var(--terra);font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin:.1rem 0 .3rem}
+.crew-card p{font-size:.9rem;color:rgba(34,23,19,.66)}
+@media (max-width:720px){.crew-grid{grid-template-columns:1fr}}
+
+/* ---------- reviews ---------- */
+.reviews{background:var(--bone)}
+.badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(34,23,19,.5);border:1px solid var(--line);padding:.3rem .8rem;border-radius:999px;margin-left:.8rem;vertical-align:middle}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.rev-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.7rem 1.6rem;display:flex;flex-direction:column;gap:.9rem}
+.rev-card p.txt{font-size:.95rem;color:rgba(34,23,19,.78);flex:1}
+.rev-meta{display:flex;align-items:center;justify-content:space-between;font-size:.85rem}
+.rev-meta .who{font-weight:600}
+.rev-meta .where{color:rgba(34,23,19,.55);font-weight:400}
+.rev-more{margin-top:2.2rem}
+@media (max-width:900px){.rev-grid{grid-template-columns:1fr}}
+
+/* ---------- review banner ---------- */
+.rev-banner{background:var(--espresso-deep);color:var(--bone)}
+.rev-banner .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.6rem;padding:clamp(2.8rem,6vw,4rem) 0}
+.rev-banner h2{font-size:clamp(1.9rem,4.6vw,2.7rem);max-width:20ch}
+.rev-banner p{color:rgba(247,241,234,.72);margin-top:.4rem;max-width:44ch}
+
+/* ---------- contact ---------- */
+.contact{background:var(--espresso);color:var(--bone)}
+.contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(2.4rem,6vw,4.5rem)}
+.contact h2{font-size:clamp(2.1rem,5vw,3rem);margin:.55rem 0 1rem}
+.contact p.sub{color:rgba(247,241,234,.75)}
+.c-rows{margin-top:1.8rem;display:grid;gap:1.1rem}
+.c-row{display:flex;gap:1rem;align-items:flex-start}
+.c-row .ic{width:42px;height:42px;border-radius:12px;background:rgba(247,241,234,.08);border:1px solid var(--line-light);color:var(--terra-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.c-row strong{display:block;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,241,234,.55);font-weight:600;margin-bottom:.1rem}
+.c-row a:hover{color:#fff;text-decoration:underline}
+.socials{display:flex;gap:.8rem;margin-top:1.9rem}
+.socials a{width:46px;height:46px;border-radius:50%;border:1px solid var(--line-light);display:flex;align-items:center;justify-content:center;color:var(--bone);transition:background .2s,transform .2s,border-color .2s}
+.socials a:hover{background:var(--terra);border-color:var(--terra);transform:translateY(-3px)}
+.contact-cta{background:rgba(247,241,234,.06);border:1px solid var(--line-light);border-radius:var(--radius);padding:clamp(1.8rem,4vw,2.6rem);display:flex;flex-direction:column;justify-content:center;gap:1rem}
+.contact-cta h3{font-size:1.7rem;margin-bottom:.3rem}
+.contact-cta .btn{width:100%}
+.contact-cta small{color:rgba(247,241,234,.6);text-align:center}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+
+/* ---------- map ---------- */
+.map{background:var(--espresso);padding-bottom:0}
+.map iframe{width:100%;height:420px;border:0;border-radius:var(--radius) var(--radius) 0 0;display:block;filter:grayscale(.25) contrast(1.02)}
+
+/* ---------- footer ---------- */
+footer{background:var(--espresso-deep);color:rgba(247,241,234,.7);padding:2.6rem 0}
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.4rem}
+.foot .brand{font-size:1.15rem;color:var(--bone)}
+.foot-links{display:flex;flex-wrap:wrap;gap:1.4rem;font-size:.88rem}
+.foot-links a:hover{color:#fff;text-decoration:underline}
+.foot .socials{margin-top:0}
+.foot .socials a{width:40px;height:40px}
+@media (max-width:720px){.foot{flex-direction:column;text-align:center;justify-content:center}}
+
+/* ---------- reveal ---------- */
+.fade-up{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.fade-up.reveal{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  .hero-slides .slide{transition:none}
+  .fade-up,.svc-card{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div id="intro" aria-hidden="true">
+  <div class="mark">Lelo's Hair Boutique</div>
+  <div class="sub">Parklands &middot; Christchurch</div>
+</div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Lelo's Hair Boutique home">
+      <span class="dot">L</span> Lelo's Hair Boutique
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-terra nav-call" href="tel:+6421484948">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      021 484 948
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile menu">
+  <button class="menu-close" id="menuClose" aria-label="Close menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="#services">Services</a>
+  <a href="#about">About</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a class="btn btn-terra" href="tel:+6421484948">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call 021 484 948
+  </a>
+</nav>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-slides" aria-hidden="true">
+    <div class="slide on" style="background-image:url('img/hero-1.jpg')"></div>
+    <div class="slide" data-src="img/hero-2.jpg"></div>
+    <div class="slide" data-src="img/hero-wash.jpg"></div>
+  </div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow" style="color:var(--terra-soft)">Hair Salon &middot; Parklands, Christchurch</span>
+    <h1>Colour, cuts &amp; occasion hair, done beautifully.</h1>
+    <p class="lead">A boutique garden salon on Royal Park Drive where every appointment is one-on-one — colour and cut specialists, with wedding styling on site.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-terra" href="tel:+6421484948">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Book an appointment
+      </a>
+      <a class="btn btn-ghost" href="#contact">Get in touch</a>
+    </div>
+    <div class="hero-rating">
+      <span class="stars" aria-label="Five star rating">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+      </span>
+      <span>5.0 &middot; loved by local clients</span>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust">
+  <div class="wrap">
+    <div class="trust-item fade-up">
+      <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></span>
+      <div><h3>Award-winning stylist</h3><p>Senior stylist recognised for colour and cut work.</p></div>
+    </div>
+    <div class="trust-item fade-up">
+      <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+      <div><h3>Open 7 days, 9am&ndash;6pm</h3><p>Appointments that fit around your week, not ours.</p></div>
+    </div>
+    <div class="trust-item fade-up">
+      <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
+      <div><h3>One-on-one boutique care</h3><p>A private garden-studio setting — your appointment, your time.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What we do</span>
+      <h2>Services at the boutique</h2>
+      <p>Every strand is a canvas — colour, cuts, treatments and styling for the moments that matter.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc-card">
+        <div class="ph"><img src="img/svc-womens.jpg" alt="Stylist finishing a woman's haircut with a dryer and brush" width="1200" height="801" loading="lazy"></div>
+        <div class="body"><h3>Women's Cut &amp; Style</h3><p>Precision cuts shaped to your face, your hair type and how you actually wear it day to day.</p></div>
+      </article>
+      <article class="svc-card">
+        <div class="ph"><img src="img/svc-colour.jpg" alt="Finished pastel violet hair colour on long wavy hair" width="1200" height="1200" loading="lazy"></div>
+        <div class="body"><h3>Hair Colouring</h3><p>Full colour, foils, balayage and creative tones — mixed and matched to suit your skin and style.</p></div>
+      </article>
+      <article class="svc-card">
+        <div class="ph"><img src="img/svc-mens.jpg" alt="Clippers, scissors and comb laid out for a men's haircut" width="1200" height="800" loading="lazy"></div>
+        <div class="body"><h3>Men's Cut</h3><p>Sharp, tidy men's cuts without the rush — walk out looking freshly finished, not just trimmed.</p></div>
+      </article>
+      <article class="svc-card">
+        <div class="ph"><img src="img/svc-treatments.jpg" alt="Healthy defined curls after a nourishing hair treatment" width="1200" height="1200" loading="lazy"></div>
+        <div class="body"><h3>Hair Treatments</h3><p>Deep conditioning and repair treatments that bring tired, coloured or curly hair back to life.</p></div>
+      </article>
+      <article class="svc-card">
+        <div class="ph"><img src="img/svc-blowdry.jpg" alt="Stylist blow drying hair with a round brush" width="1200" height="801" loading="lazy"></div>
+        <div class="body"><h3>Blow Dry &amp; Finish</h3><p>A proper blow wave that holds — perfect before a night out or just because it's Friday.</p></div>
+      </article>
+      <article class="svc-card">
+        <div class="ph"><img src="img/svc-occasion.jpg" alt="Curling iron styling soft waves for a special occasion" width="1200" height="2136" loading="lazy"></div>
+        <div class="body"><h3>Wedding &amp; Occasion Hair</h3><p>Bridal and event styling, with weddings catered for on site — relaxed, unhurried and beautiful.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo fade-up">
+      <img src="img/about-lelo.jpg" alt="Lelo seated inside her garden salon at Lelo's Hair Boutique" width="1351" height="765" loading="lazy">
+      <span class="tag">The boutique</span>
+    </div>
+    <div class="fade-up">
+      <span class="eyebrow">About us</span>
+      <h2>Where style and sophistication come together</h2>
+      <p>Lelo's Hair Boutique is a private garden salon in Parklands, Christchurch. It's a different pace from a busy high-street salon — one chair, one stylist, and an appointment that's entirely about you.</p>
+      <p>From everyday cuts to complete colour transformations and wedding-day styling, every visit ends the same way: walking out feeling confident and transformed.</p>
+      <ul class="checks">
+        <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Award-winning senior stylist</li>
+        <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Locally owned, open 7 days a week</li>
+        <li><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Colour &amp; cut specialists, weddings on site</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CREW -->
+<section class="section crew">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Meet your stylist</span>
+      <h2>The face behind the chair</h2>
+    </div>
+    <div class="crew-grid">
+      <div class="crew-card fade-up">
+        <span class="avatar">L</span>
+        <div>
+          <h3>Lelo</h3>
+          <div class="role">Owner &amp; Senior Stylist</div>
+          <p>Your stylist from consult to finish — an award-winning senior stylist specialising in colour and cut work.</p>
+        </div>
+      </div>
+      <div class="crew-card fade-up">
+        <span class="avatar" style="background:var(--terra);border-color:var(--espresso)">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>
+        </span>
+        <div>
+          <h3>You, in the chair</h3>
+          <div class="role">One-on-one appointments</div>
+          <p>No double-booking, no waiting around — the boutique is yours for the length of your appointment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Kind words</span>
+      <h2>What clients say <span class="badge">Example reviews</span></h2>
+      <p>Lelo's Google reviews are just getting started — these example reviews show how this section will look with real ones.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card fade-up">
+        <span class="stars" aria-label="5 stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </span>
+        <p class="txt">"Best balayage I've had in Christchurch. Lelo took the time to get the tone exactly right and the little garden studio is so relaxing."</p>
+        <div class="rev-meta"><span class="who">Sarah M. <span class="where">&middot; Parklands</span></span></div>
+      </div>
+      <div class="rev-card fade-up">
+        <span class="stars" aria-label="5 stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </span>
+        <p class="txt">"Booked in for wedding hair for myself and two bridesmaids — Lelo had us all done on site, on time, and it held all night. Couldn't recommend more."</p>
+        <div class="rev-meta"><span class="who">Emma T. <span class="where">&middot; New Brighton</span></span></div>
+      </div>
+      <div class="rev-card fade-up">
+        <span class="stars" aria-label="5 stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </span>
+        <p class="txt">"So easy being able to get in on a Sunday. Lovely one-on-one experience and my colour has never looked healthier."</p>
+        <div class="rev-meta"><span class="who">Jess R. <span class="where">&middot; Waimairi Beach</span></span></div>
+      </div>
+    </div>
+    <div class="rev-more">
+      <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=Lelo%27s%20Hair%20Boutique%20105%20Royal%20Park%20Drive%20Christchurch" target="_blank" rel="noopener">
+        See us on Google
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEW BANNER -->
+<section class="rev-banner">
+  <div class="wrap">
+    <div>
+      <h2>Happy with your hair?</h2>
+      <p>A quick Google review helps other locals find the boutique — it takes less than a minute.</p>
+    </div>
+    <a class="btn btn-terra" href="https://www.google.com/maps/search/?api=1&query=Lelo%27s%20Hair%20Boutique%20105%20Royal%20Park%20Drive%20Christchurch" target="_blank" rel="noopener">
+      Leave us a review
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow" style="color:var(--terra-soft)">Get in touch</span>
+      <h2>Book your next appointment</h2>
+      <p class="sub">Call or email to book — or just to talk through the colour you've been thinking about.</p>
+      <div class="c-rows">
+        <div class="c-row">
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><strong>Find us</strong>105 Royal Park Drive, Parklands, Christchurch 8083</div>
+        </div>
+        <div class="c-row">
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div><strong>Phone</strong><a href="tel:+6421484948">021 484 948</a></div>
+        </div>
+        <div class="c-row">
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+          <div><strong>Email</strong><a href="#" data-gmail data-user="lelolelo" data-domain="hotmail.co.nz" data-su="Booking%20enquiry%20%E2%80%94%20Lelo%27s%20Hair%20Boutique" data-body="Hi%20Lelo%2C%0A%0AI%27d%20love%20to%20book%20an%20appointment.%0A%0AWhat%20I%27m%20after%3A%20%0APreferred%20day%2Ftime%3A%20%0A%0AThanks!"><span data-email-text>Email the boutique</span></a></div>
+        </div>
+        <div class="c-row">
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+          <div><strong>Hours</strong>Open 7 days, 9:00am &ndash; 6:00pm</div>
+        </div>
+      </div>
+      <div class="socials">
+        <a href="https://www.instagram.com/leloshairboutique/" target="_blank" rel="noopener" aria-label="Lelo's Hair Boutique on Instagram">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.facebook.com/leloshairboutiquee/" target="_blank" rel="noopener" aria-label="Lelo's Hair Boutique on Facebook">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/search?q=Lelos%20Hair%20Boutique%20Christchurch" target="_blank" rel="noopener" aria-label="Find Lelo's Hair Boutique on TikTok">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="contact-cta">
+      <h3>Ready when you are</h3>
+      <a class="btn btn-terra" href="tel:+6421484948">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call to book
+      </a>
+      <a class="btn btn-ghost" href="#" data-gmail data-user="lelolelo" data-domain="hotmail.co.nz" data-su="Booking%20enquiry%20%E2%80%94%20Lelo%27s%20Hair%20Boutique" data-body="Hi%20Lelo%2C%0A%0AI%27d%20love%20to%20book%20an%20appointment.%0A%0AWhat%20I%27m%20after%3A%20%0APreferred%20day%2Ftime%3A%20%0A%0AThanks!">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Email about an appointment
+      </a>
+      <small>Open 7 days &middot; Parklands, Christchurch</small>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map">
+  <div class="wrap">
+    <iframe title="Map showing Lelo's Hair Boutique at 105 Royal Park Drive, Parklands, Christchurch" src="https://www.google.com/maps?q=105+Royal+Park+Drive,+Parklands,+Christchurch+8083,+New+Zealand&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#top"><span class="dot">L</span> Lelo's Hair Boutique</a>
+    <div class="foot-links">
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Lelo%27s%20Hair%20Boutique%20105%20Royal%20Park%20Drive%20Christchurch" target="_blank" rel="noopener">Review us on Google</a>
+    </div>
+    <div class="socials">
+      <a href="https://www.instagram.com/leloshairboutique/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="https://www.facebook.com/leloshairboutiquee/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/search?q=Lelos%20Hair%20Boutique%20Christchurch" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:1.6rem;font-size:.82rem;color:rgba(247,241,234,.45);text-align:center">
+    &copy; 2026 Lelo's Hair Boutique &middot; Parklands, Christchurch &middot; Demo website
+  </div>
+</footer>
+
+<script>
+// intro overlay
+window.addEventListener('load',function(){
+  setTimeout(function(){document.getElementById('intro').classList.add('done');},1400);
+});
+setTimeout(function(){document.getElementById('intro').classList.add('done');},3200);
+
+// solid nav on scroll
+var header=document.getElementById('header');
+function onScroll(){header.classList.toggle('solid',window.scrollY>40);}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// mobile menu
+var burger=document.getElementById('burger'),menu=document.getElementById('mobileMenu');
+burger.addEventListener('click',function(){menu.classList.add('open');burger.setAttribute('aria-expanded','true');});
+document.getElementById('menuClose').addEventListener('click',function(){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');});
+menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');});});
+
+// hero rotation (lazy-load slides 2+, pause under reduced motion)
+(function(){
+  var slides=Array.prototype.slice.call(document.querySelectorAll('.hero-slides .slide'));
+  slides.forEach(function(s){var src=s.getAttribute('data-src');if(src){s.style.backgroundImage="url('"+src+"')";}});
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var i=0;
+  setInterval(function(){
+    slides[i].classList.remove('on');
+    i=(i+1)%slides.length;
+    slides[i].classList.add('on');
+  },6000);
+})();
+
+// gmail compose buttons (address assembled in JS)
+document.querySelectorAll('a[data-gmail]').forEach(function(a){
+  var to=a.getAttribute('data-user')+'@'+a.getAttribute('data-domain');
+  a.href='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(to)+'&su='+(a.getAttribute('data-su')||'')+'&body='+(a.getAttribute('data-body')||'');
+  a.target='_blank';a.rel='noopener';
+});
+
+// scroll reveal
+(function(){
+  var els=document.querySelectorAll('.fade-up, .svc-card');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('reveal');});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('reveal');io.unobserve(en.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+</body>
+</html>
