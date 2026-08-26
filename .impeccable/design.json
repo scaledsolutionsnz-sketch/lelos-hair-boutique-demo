@@ -1,0 +1,517 @@
+{
+ "schemaVersion": 2,
+ "generatedAt": "2026-08-26T00:00:00Z",
+ "title": "Design System: Lelo's Hair Boutique",
+ "extensions": {
+  "colorMeta": {
+   "ink": {
+    "role": "neutral",
+    "displayName": "Ink",
+    "canonical": "#0C0B0B",
+    "tonalRamp": [
+     "#0C0B0B",
+     "#1E1B1A",
+     "#322E2C",
+     "#4A4442",
+     "#665F5C",
+     "#8A8380",
+     "#B5AFAC",
+     "#E4E1DF"
+    ]
+   },
+   "ink-2": {
+    "role": "neutral",
+    "displayName": "Plate Ink",
+    "canonical": "#141212",
+    "tonalRamp": [
+     "#0C0B0B",
+     "#141212",
+     "#2A2726",
+     "#403B39",
+     "#5C5654",
+     "#807977",
+     "#ADA6A3",
+     "#DFDBD9"
+    ]
+   },
+   "chalk": {
+    "role": "neutral",
+    "displayName": "Chalk",
+    "canonical": "#F4F3F1",
+    "tonalRamp": [
+     "#171716",
+     "#2C2B29",
+     "#45443F",
+     "#625F5A",
+     "#857F79",
+     "#A9A49E",
+     "#D0CCC7",
+     "#F4F3F1"
+    ]
+   },
+   "chalk-dim": {
+    "role": "neutral",
+    "displayName": "Chalk Dim",
+    "canonical": "rgba(244,243,241,.64)",
+    "tonalRamp": [
+     "#171716",
+     "#2C2B29",
+     "#45443F",
+     "#625F5A",
+     "#857F79",
+     "#A0A09C",
+     "#D0CCC7",
+     "#F4F3F1"
+    ]
+   },
+   "rule": {
+    "role": "neutral",
+    "displayName": "Rule",
+    "canonical": "rgba(244,243,241,.20)",
+    "tonalRamp": [
+     "#141212",
+     "#1E1B1A",
+     "#282524",
+     "#332F2E",
+     "#3D3937",
+     "#484341",
+     "#524D4B",
+     "#5C5755"
+    ]
+   },
+   "rule-soft": {
+    "role": "neutral",
+    "displayName": "Rule Soft",
+    "canonical": "rgba(244,243,241,.11)",
+    "tonalRamp": [
+     "#0F0E0E",
+     "#151313",
+     "#1C1918",
+     "#22201E",
+     "#292624",
+     "#2F2C2A",
+     "#363230",
+     "#3C3836"
+    ]
+   },
+   "paper": {
+    "role": "neutral",
+    "displayName": "Paper",
+    "canonical": "#EDEDEA",
+    "tonalRamp": [
+     "#161614",
+     "#2B2A27",
+     "#43423E",
+     "#5F5E58",
+     "#82817A",
+     "#A6A59E",
+     "#CBCAC4",
+     "#EDEDEA"
+    ]
+   },
+   "paper-2": {
+    "role": "neutral",
+    "displayName": "Paper Tint",
+    "canonical": "#E3E3DF",
+    "tonalRamp": [
+     "#141413",
+     "#282825",
+     "#3F3F3B",
+     "#5A5A55",
+     "#7C7C76",
+     "#9F9F99",
+     "#C3C3BE",
+     "#E3E3DF"
+    ]
+   },
+   "paper-dim": {
+    "role": "neutral",
+    "displayName": "Ink Dim",
+    "canonical": "rgba(12,11,11,.62)",
+    "tonalRamp": [
+     "#0C0B0B",
+     "#242220",
+     "#3B3835",
+     "#54504C",
+     "#6E6965",
+     "#8C8783",
+     "#B0ACA8",
+     "#D6D3D0"
+    ]
+   },
+   "paper-rule": {
+    "role": "neutral",
+    "displayName": "Paper Rule",
+    "canonical": "rgba(12,11,11,.18)",
+    "tonalRamp": [
+     "#8F8F8C",
+     "#A4A4A1",
+     "#B4B4B1",
+     "#C1C1BE",
+     "#CCCCC9",
+     "#D6D6D3",
+     "#E1E1DE",
+     "#EDEDEA"
+    ]
+   },
+   "gold": {
+    "role": "primary",
+    "displayName": "Studio Gold",
+    "canonical": "#C89A4E",
+    "tonalRamp": [
+     "#241A0A",
+     "#3D2D13",
+     "#5A431E",
+     "#79592A",
+     "#986F37",
+     "#B48545",
+     "#C89A4E",
+     "#E0BC85"
+    ]
+   }
+  },
+  "typographyMeta": {
+   "display": {
+    "displayName": "Display",
+    "purpose": "Section heads and the cover headline. Expanded (wdth 118) black caps, negatively tracked. The masthead voice.",
+    "size": "clamp(2.4rem, 5.6vw, 4.6rem)"
+   },
+   "headline": {
+    "displayName": "Headline",
+    "purpose": "One step below display, used for the award section.",
+    "size": "clamp(2.2rem, 4.8vw, 3.8rem)"
+   },
+   "pull": {
+    "displayName": "Pull",
+    "purpose": "The single sentence opening the stylist feature. Sentence case at wdth 108, which is what separates it from a heading.",
+    "size": "clamp(1.4rem, 3.3vw, 2.35rem)"
+   },
+   "title": {
+    "displayName": "Title",
+    "purpose": "Service entry names, margin notes, boxed sub-heads, drawer links.",
+    "size": "clamp(1.02rem, 1.5vw, 1.35rem)"
+   },
+   "body": {
+    "displayName": "Body",
+    "purpose": "All running prose, capped at 68ch.",
+    "size": "clamp(1.02rem, .42vw + .92rem, 1.16rem)"
+   },
+   "base": {
+    "displayName": "Base",
+    "purpose": "Page default. Captions and small copy step down from here.",
+    "size": "clamp(15px, .55vw + 13.4px, 17px)"
+   },
+   "label": {
+    "displayName": "Label",
+    "purpose": "The magazine's caption voice: tracked small caps for cover lines, fact keys, nav and footer links.",
+    "size": ".68rem"
+   },
+   "action": {
+    "displayName": "Action",
+    "purpose": "Buttons and call targets. Wide-tracked caps in a hard rectangle.",
+    "size": ".83rem"
+   },
+   "navLabel": {
+    "displayName": "Nav label",
+    "purpose": "Nav and footer links, review citations, compact call button.",
+    "size": ".72rem"
+   },
+   "micro": {
+    "displayName": "Micro",
+    "purpose": "Footer fine print and the colophon box note.",
+    "size": ".8rem"
+   },
+   "caption": {
+    "displayName": "Caption",
+    "purpose": "Plate captions in the feature well.",
+    "size": ".88rem"
+   },
+   "smallBody": {
+    "displayName": "Small body",
+    "purpose": "Service entry copy, fact values, tightened prose.",
+    "size": ".95rem"
+   },
+   "coverHeadline": {
+    "displayName": "Cover headline",
+    "purpose": "The masthead line on the cover.",
+    "size": "clamp(2.6rem, 6.2vw, 5.4rem)"
+   },
+   "colophonHead": {
+    "displayName": "Colophon head",
+    "purpose": "The closing booking heading.",
+    "size": "clamp(2.6rem, 6vw, 5.4rem)"
+   },
+   "drawerLink": {
+    "displayName": "Drawer link",
+    "purpose": "Full-screen mobile menu links.",
+    "size": "clamp(1.7rem, 7vw, 2.6rem)"
+   },
+   "marginNote": {
+    "displayName": "Margin note",
+    "purpose": "The heading beside the offset plate.",
+    "size": "clamp(1.3rem, 2.6vw, 2rem)"
+   },
+   "wordmark": {
+    "displayName": "Wordmark",
+    "purpose": "The nav bar wordmark.",
+    "size": "clamp(1rem, 1.5vw, 1.24rem)"
+   }
+  },
+  "shadows": [],
+  "motion": [
+   {
+    "name": "ease",
+    "value": "cubic-bezier(.16, 1, .3, 1)",
+    "purpose": "The only expressive curve in the build. Used for the page turn, the drawer, the bar and button state."
+   },
+   {
+    "name": "page-turn",
+    "value": "clip-path 1.15s cubic-bezier(.16,1,.3,1)",
+    "purpose": "The one authored moment: the opener plate wipes open from the gutter. Scoped to .plate.opener alone."
+   },
+   {
+    "name": "beat",
+    "value": "opacity .7s cubic-bezier(.16,1,.3,1) .22s, transform .7s cubic-bezier(.16,1,.3,1) .22s",
+    "purpose": "Caption tier. A 12px rise and fade set one beat after the plate so the wipe still reads as the event."
+   },
+   {
+    "name": "thumb-zoom",
+    "value": "transform .8s cubic-bezier(.16,1,.3,1)",
+    "purpose": "Contents entry thumbnail scales to 1.06 on hover. Nothing else in the row moves."
+   },
+   {
+    "name": "drawer",
+    "value": "transform .5s cubic-bezier(.16,1,.3,1), visibility .5s",
+    "purpose": "Full-screen menu translates down from -100%."
+   },
+   {
+    "name": "state",
+    "value": "0.25s to 0.28s linear-default",
+    "purpose": "Button, link and bar state changes. Deliberately unremarkable so the page turn stays the only motion event."
+   }
+  ],
+  "breakpoints": [
+   {
+    "name": "nav-collapse",
+    "value": "1000px"
+   },
+   {
+    "name": "letters-2up",
+    "value": "900px"
+   },
+   {
+    "name": "colophon-stack",
+    "value": "860px"
+   },
+   {
+    "name": "cover-stack",
+    "value": "820px"
+   },
+   {
+    "name": "head-stack",
+    "value": "800px"
+   },
+   {
+    "name": "entry-compact",
+    "value": "760px"
+   },
+   {
+    "name": "bar-compact",
+    "value": "700px"
+   },
+   {
+    "name": "spread-stack",
+    "value": "640px"
+   },
+   {
+    "name": "letters-1up",
+    "value": "620px"
+   },
+   {
+    "name": "cover-foot-stack",
+    "value": "600px"
+   },
+   {
+    "name": "headline-narrow",
+    "value": "560px"
+   }
+  ]
+ },
+ "components": [
+  {
+   "name": "Primary Action",
+   "kind": "button",
+   "refersTo": "action-primary",
+   "description": "The call action. Chalk fill on ink; hover removes the fill rather than tinting it.",
+   "html": "<a class=\"ds-act\" href=\"tel:+6421484948\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z\"/></svg>Ring to book</a>",
+   "css": ".ds-act{display:inline-flex;align-items:center;gap:.65rem;min-height:54px;padding:.95rem 1.6rem;background:#F4F3F1;color:#0C0B0B;font-family:'Archivo',system-ui,sans-serif;font-variation-settings:'wdth' 100,'wght' 700;font-size:.83rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:1px solid #F4F3F1;border-radius:0;transition:background .28s cubic-bezier(.16,1,.3,1),color .28s cubic-bezier(.16,1,.3,1)}.ds-act svg{width:16px;height:16px;flex:none}.ds-act:hover{background:transparent;color:#F4F3F1}.ds-act:focus-visible{outline:2px solid #C89A4E;outline-offset:3px}"
+  },
+  {
+   "name": "Line Action",
+   "kind": "button",
+   "refersTo": "action-line",
+   "description": "Secondary action. Hairline outline on ink; hover fills chalk.",
+   "html": "<a class=\"ds-act-line\" href=\"#work\">See the work</a>",
+   "css": ".ds-act-line{display:inline-flex;align-items:center;gap:.65rem;min-height:54px;padding:.95rem 1.6rem;background:transparent;color:#F4F3F1;font-family:'Archivo',system-ui,sans-serif;font-variation-settings:'wdth' 100,'wght' 700;font-size:.83rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(244,243,241,.20);border-radius:0;transition:background .28s cubic-bezier(.16,1,.3,1),color .28s cubic-bezier(.16,1,.3,1),border-color .28s cubic-bezier(.16,1,.3,1)}.ds-act-line:hover{background:#F4F3F1;color:#0C0B0B;border-color:#F4F3F1}.ds-act-line:focus-visible{outline:2px solid #C89A4E;outline-offset:3px}"
+  },
+  {
+   "name": "Nav Call Button",
+   "kind": "nav",
+   "refersTo": "nav-call",
+   "description": "Always-visible call target in the fixed bar. Collapses to a 46px icon square below 700px.",
+   "html": "<a class=\"ds-nav-call\" href=\"tel:+6421484948\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z\"/></svg><span>021 484 948</span></a>",
+   "css": ".ds-nav-call{display:inline-flex;align-items:center;gap:.5rem;font-family:'Archivo',system-ui,sans-serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-variation-settings:'wdth' 100,'wght' 700;text-decoration:none;color:#0C0B0B;background:#F4F3F1;padding:.6rem 1rem;min-height:42px;border:1px solid #F4F3F1;border-radius:0;transition:background .25s,color .25s}.ds-nav-call svg{width:14px;height:14px}.ds-nav-call:hover{background:transparent;color:#F4F3F1}.ds-nav-call:focus-visible{outline:2px solid #C89A4E;outline-offset:3px}"
+  },
+  {
+   "name": "Nav Link",
+   "kind": "nav",
+   "refersTo": null,
+   "description": "Section link in the fixed bar. A transparent bottom border becomes gold on hover.",
+   "html": "<a class=\"ds-nav-link\" href=\"#work\">Work</a>",
+   "css": ".ds-nav-link{font-family:'Archivo',system-ui,sans-serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-variation-settings:'wdth' 100,'wght' 600;text-decoration:none;color:rgba(244,243,241,.64);padding-block:.4rem;border-bottom:1px solid transparent;transition:color .25s,border-color .25s}.ds-nav-link:hover{color:#F4F3F1;border-bottom-color:#C89A4E}.ds-nav-link:focus-visible{outline:2px solid #C89A4E;outline-offset:3px}"
+  },
+  {
+   "name": "Plate and Caption",
+   "kind": "custom",
+   "refersTo": null,
+   "description": "The signature unit of the feature well: an aspect-ratio image frame with a gold category word and a caption sentence beneath it.",
+   "html": "<figure class=\"ds-figure\"><div class=\"ds-plate\"><img src=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='10'%3E%3Crect width='8' height='10' fill='%23141212'/%3E%3C/svg%3E\" alt=\"\"></div><figcaption class=\"ds-cap\"><span class=\"ds-cap-n\">Colour</span><span class=\"ds-cap-t\">Lived-in blonde, curled out and shot against the garden wall the studio backs onto.</span></figcaption></figure>",
+   "css": ".ds-figure{margin:0;max-width:420px}.ds-plate{position:relative;background:#141212;aspect-ratio:4/5;border-radius:0}.ds-plate img{width:100%;height:100%;object-fit:cover;display:block}.ds-cap{margin-top:.85rem;display:grid;grid-template-columns:auto minmax(0,1fr);gap:.9rem;align-items:baseline;font-family:'Archivo',system-ui,sans-serif}.ds-cap-n{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:#C89A4E;font-variation-settings:'wdth' 100,'wght' 700}.ds-cap-t{font-size:.86rem;color:rgba(244,243,241,.64);line-height:1.5;max-width:56ch}"
+  },
+  {
+   "name": "Contents Entry",
+   "kind": "custom",
+   "refersTo": "contents-entry",
+   "description": "The services row on the paper section. A magazine contents line, not a service card: thumbnail, title, description, hairline rules, no fill and no border.",
+   "html": "<div class=\"ds-paper\"><article class=\"ds-entry\"><span class=\"ds-entry-thumb\"><img src=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='1' height='1' fill='%23E3E3DF'/%3E%3C/svg%3E\" alt=\"\"></span><h3>Hair colouring</h3><p>Full colour, foils, balayage and creative tones, mixed to suit your skin rather than a swatch book.</p></article></div>",
+   "css": ".ds-paper{background:#EDEDEA;color:#0C0B0B;padding:1rem;font-family:'Archivo',system-ui,sans-serif}.ds-entry{display:grid;grid-template-columns:88px minmax(0,15rem) minmax(0,1fr);gap:clamp(1rem,2.6vw,2.4rem);align-items:center;padding:clamp(1.1rem,2.4vw,1.7rem) 0;border-top:1px solid rgba(12,11,11,.18);border-bottom:1px solid rgba(12,11,11,.18)}.ds-entry-thumb{width:88px;aspect-ratio:1;background:#E3E3DF;overflow:hidden;display:block}.ds-entry-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1)}.ds-entry:hover .ds-entry-thumb img{transform:scale(1.06)}.ds-entry h3{font-variation-settings:'wdth' 112,'wght' 700;font-weight:400;text-transform:uppercase;font-size:clamp(1.02rem,1.5vw,1.35rem);letter-spacing:-.01em;line-height:1.1;margin:0}.ds-entry p{font-size:.94rem;color:rgba(12,11,11,.62);line-height:1.55;max-width:58ch;margin:0}@media (max-width:760px){.ds-entry{grid-template-columns:64px minmax(0,1fr);gap:1rem 1.1rem;align-items:start}.ds-entry-thumb{width:64px}.ds-entry p{grid-column:2}}"
+  },
+  {
+   "name": "Fact List",
+   "kind": "custom",
+   "refersTo": null,
+   "description": "Key/value rows on soft rules. The system's answer to a spec table: gold or dim label key, body-text value, no fill.",
+   "html": "<ul class=\"ds-facts\"><li><span>Studio</span><span>105 Royal Park Drive, Parklands</span></li><li><span>Hours</span><span>Open 7 days, 9am to 6pm</span></li></ul>",
+   "css": ".ds-facts{list-style:none;margin:0;padding:0;border-top:1px solid rgba(244,243,241,.11);font-family:'Archivo',system-ui,sans-serif;color:#F4F3F1;max-width:520px}.ds-facts li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:1rem;align-items:baseline;padding:.7rem 0;border-bottom:1px solid rgba(244,243,241,.11);font-size:.93rem}.ds-facts li span:first-child{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:#C89A4E;font-variation-settings:'wdth' 100,'wght' 700}"
+  },
+  {
+   "name": "Booking Panel",
+   "kind": "card",
+   "refersTo": "booking-box",
+   "description": "The only outlined container in the build. A 1px rule outline with a title, a line of copy, stacked full-width actions and a small print line. No fill, no shadow, no radius.",
+   "html": "<div class=\"ds-box\"><h3>Book an appointment</h3><p>A phone call is the fastest way in. If it goes to voicemail, leave a message and she will call back.</p><a class=\"ds-box-act\" href=\"tel:+6421484948\">021 484 948</a><small>Open 7 days, 9am to 6pm. Parklands, Christchurch.</small></div>",
+   "css": ".ds-box{border:1px solid rgba(244,243,241,.20);border-radius:0;padding:clamp(1.4rem,3vw,2.1rem);background:transparent;color:#F4F3F1;font-family:'Archivo',system-ui,sans-serif;max-width:420px}.ds-box h3{font-variation-settings:'wdth' 112,'wght' 700;font-weight:400;text-transform:uppercase;font-size:1.15rem;letter-spacing:-.01em;margin:0 0 .5rem;line-height:1.05}.ds-box p{font-variation-settings:'wdth' 100,'wght' 400;font-size:.95rem;line-height:1.62;color:rgba(244,243,241,.64);margin:0}.ds-box-act{display:flex;align-items:center;justify-content:center;width:100%;min-height:54px;margin-top:.8rem;padding:.95rem 1.6rem;background:#F4F3F1;color:#0C0B0B;font-variation-settings:'wdth' 100,'wght' 700;font-size:.83rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:1px solid #F4F3F1;transition:background .28s cubic-bezier(.16,1,.3,1),color .28s cubic-bezier(.16,1,.3,1)}.ds-box-act:hover{background:transparent;color:#F4F3F1}.ds-box-act:focus-visible{outline:2px solid #C89A4E;outline-offset:3px}.ds-box small{display:block;margin-top:1rem;font-size:.8rem;color:rgba(244,243,241,.64);line-height:1.5}"
+  },
+  {
+   "name": "Letter",
+   "kind": "custom",
+   "refersTo": null,
+   "description": "A review on the paper ground. Flex column with the citation pushed to the bottom so the rules line up across the row; quote marks are CSS pseudo-elements. The outlined chip labels example copy.",
+   "html": "<div class=\"ds-paper-2\"><article class=\"ds-letter\"><blockquote>Best balayage I have had in Christchurch. She took the time to get the tone exactly right.</blockquote><cite>Example &middot; colour client</cite></article><span class=\"ds-flag\">Example reviews, not real clients</span></div>",
+   "css": ".ds-paper-2{background:#EDEDEA;color:#0C0B0B;padding:1rem;font-family:'Archivo',system-ui,sans-serif;max-width:380px}.ds-letter{display:flex;flex-direction:column;padding-bottom:1.5rem;border-bottom:1px solid rgba(12,11,11,.18)}.ds-letter blockquote{font-size:1rem;line-height:1.58;color:#0C0B0B;margin:0}.ds-letter blockquote::before{content:\"\\201C\"}.ds-letter blockquote::after{content:\"\\201D\"}.ds-letter cite{margin-top:auto;padding-top:.9rem;display:block;font-style:normal;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(12,11,11,.62);font-variation-settings:'wdth' 100,'wght' 600}.ds-flag{display:inline-block;font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;font-variation-settings:'wdth' 100,'wght' 700;border:1px solid rgba(12,11,11,.18);color:rgba(12,11,11,.62);padding:.3rem .7rem;margin-top:1rem}"
+  },
+  {
+   "name": "Social Icon Button",
+   "kind": "button",
+   "refersTo": "icon-button",
+   "description": "46px square hairline target holding an inline SVG. Hover inverts to a chalk fill.",
+   "html": "<div class=\"ds-soc\"><a href=\"#\" aria-label=\"Instagram\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\" ry=\"5\"/><path d=\"M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z\"/><line x1=\"17.5\" y1=\"6.5\" x2=\"17.51\" y2=\"6.5\"/></svg></a><a href=\"#\" aria-label=\"Facebook\"><svg viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z\"/></svg></a></div>",
+   "css": ".ds-soc{display:flex;gap:.6rem}.ds-soc a{width:46px;height:46px;border:1px solid rgba(244,243,241,.20);border-radius:0;display:flex;align-items:center;justify-content:center;color:#F4F3F1;transition:background .25s,color .25s,border-color .25s}.ds-soc svg{width:18px;height:18px}.ds-soc a:hover{background:#F4F3F1;color:#0C0B0B;border-color:#F4F3F1}.ds-soc a:focus-visible{outline:2px solid #C89A4E;outline-offset:3px}"
+  }
+ ],
+ "narrative": {
+  "northStar": "The Issue",
+  "overview": "The site is a printed fashion issue, not a salon website. Her finished hair is the entire argument, so every structural decision hands the page back to the photographs: a full-bleed cover plate with the logo lockup as masthead, a feature well of plates with numbered captions, a contents page for services, a colophon for booking. There is no salon-template hero, no icon-card service grid, and none of the cream/serif/terracotta vocabulary of the site it replaced.\n\nThe ground is near-black ink with chalk text, broken exactly once by a paper-white reading section. Colour arrives from the photography and nowhere else; the only manufactured warm value is the gold lifted out of the client's existing logo, spent on caption numbers, fact keys, focus rings and link hovers. Structure is carried by hairline rules and grid alignment, never by cards, panels, radii or shadows. One typeface does all of it: Archivo variable, worked through width, weight, case, tracking and scale.\n\nThe build is phone-first by construction. It is read at night on a small screen, so the display sizes are clamped against viewport width, the cover headline narrows its width axis rather than shrinking, and every text pair clears WCAG AA (measured floor 5.27:1, dimmed ink on paper).",
+  "keyCharacteristics": [
+   "One grotesque, five widths, no second family",
+   "Ink ground, chalk text, one paper section, one gold chrome",
+   "Square corners everywhere; there is no radius token in the file",
+   "Hairline rules and grid alignment instead of cards",
+   "Photography supplies all colour; type never competes with it",
+   "One authored motion moment, gated so content is visible by default"
+  ],
+  "rules": [
+   {
+    "name": "The Photograph Supplies the Colour Rule",
+    "body": "No hue enters the palette that is not already in a plate. If a surface needs warmth, crop a photograph into it rather than tinting it.",
+    "section": "colors"
+   },
+   {
+    "name": "The Gold Is Ink, Not Paint Rule",
+    "body": "Gold is used as a foreground mark at small sizes only: caption numbers, fact keys, hover underlines, focus rings. It never fills a shape, never becomes a button, and never appears at display scale.",
+    "section": "colors"
+   },
+   {
+    "name": "The One Paper Section Rule",
+    "body": "Light ground is a deliberate interruption in the sequence, used for the reading sections (contents, letters). A third and fourth paper section would turn the interruption into a stripe pattern and destroy it.",
+    "section": "colors"
+   },
+   {
+    "name": "The One Family Rule",
+    "body": "Archivo does every job. Any new hierarchy tier is produced by moving wdth, wght, case, tracking or scale. Adding a second family is the one change that breaks this system outright.",
+    "section": "typography"
+   },
+   {
+    "name": "The Width Axis Yields First Rule",
+    "body": "When display type will not hold its line count on a small screen, narrow the width axis before you cut the size. The cover headline drops from wdth 116 to wdth 100 below 560px and keeps its scale.",
+    "section": "typography"
+   },
+   {
+    "name": "The Caps Are For Structure Rule",
+    "body": "Uppercase marks the frame, headings, labels, buttons, navigation. Anything that is actually read as a sentence, including the pull quote, stays in sentence case.",
+    "section": "typography"
+   },
+   {
+    "name": "The Caption Returns to the Column Rule",
+    "body": "An image may break the column; its caption may not. Full-bleed plates always re-enter min(1240px, 100% - 2 x gut) so the caption line hangs on the same left edge as the body text.",
+    "section": "layout"
+   },
+   {
+    "name": "The Gutter Is the Only Margin Rule",
+    "body": "Page margin, bar padding and cover inset all read --gut. Never hard-code an edge inset.",
+    "section": "layout"
+   },
+   {
+    "name": "The One-Border Rule",
+    "body": "Elevation is declared once. A surface gets a 1px border or a ground change, never a border plus a shadow.",
+    "section": "elevation"
+   },
+   {
+    "name": "The Local Scrim Rule",
+    "body": "When type on a photograph is not legible, give that block its own radial ground. Do not darken the global gradient; the plate is the argument and dimming it costs more than it buys.",
+    "section": "elevation"
+   },
+   {
+    "name": "The Square Corner Rule",
+    "body": "Radius is zero throughout. A rounded corner in this world reads immediately as an import from a different site.",
+    "section": "shapes"
+   },
+   {
+    "name": "The Hairline Rule",
+    "body": "Separation is a 1px rule or nothing. No dividers thicker than 1px, no filled separator bars, no card outlines pretending to be containers.",
+    "section": "shapes"
+   }
+  ],
+  "dos": [
+   "Do produce new hierarchy by moving Archivo's wdth and wght axes. The named widths in use are 100 (body, labels, actions), 108 (pull), 112 (titles), 116 and 118 (display).",
+   "Do narrow the width axis before reducing display size on small screens.",
+   "Do keep every corner square and every separation a 1px hairline.",
+   "Do give a text block over a photograph its own local radial ground rather than darkening the global scrim.",
+   "Do let a plate break the column and bring its caption back into min(1240px, 100% - 2 x gut).",
+   "Do spend gold only as a small foreground mark: caption categories, fact keys, hover underlines, focus rings.",
+   "Do gate any new motion behind the motion root class so content is visible when JS or IntersectionObserver is absent.",
+   "Do assemble contact addresses at runtime; keep them out of the markup.",
+   "Do hold every text pair above 4.5:1. The current floor is 5.27:1 (dimmed ink on paper); do not add a dimmer tier under it."
+  ],
+  "donts": [
+   "Don't introduce a second typeface, a serif, or a script face for accents.",
+   "Don't add border-radius, box-shadow, or a card surface. A surface gets one border or one ground change, never both.",
+   "Don't invent a colour. New hue enters through photography, or not at all.",
+   "Don't use gold as a fill, a button, a rule, or at display scale.",
+   "Don't add a third or fourth paper section; the light ground works because it interrupts.",
+   "Don't turn services into an icon grid or a card deck. They are contents lines on rules.",
+   "Don't extend the clip-path wipe to other plates. One authored moment; everything else arrives quietly.",
+   "Don't centre body composition. The cover masthead is the only centred element in the build."
+  ]
+ }
+}
