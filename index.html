@@ -189,6 +189,13 @@ h1,h2,h3{font-weight:400;line-height:1.05}
 }
 .cover__mast img{width:100%;height:auto}
 .cover__body{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:end;margin-top:auto}
+.cover__lines{position:relative}
+/* the global scrim was lifted so the photograph reads; the text block
+   therefore carries its own ground rather than darkening the whole plate */
+.cover__lines::before{
+  content:"";position:absolute;inset:-10% -14% -16% -45%;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse at 32% 58%,rgba(12,11,11,.74) 0%,rgba(12,11,11,.46) 46%,rgba(12,11,11,0) 78%);
+}
 .cover__lines h1,.cover__lines .cover__sub{max-width:34ch}
 .cover__lines h1{
   font-variation-settings:'wdth' 116,'wght' 800;
@@ -205,6 +212,11 @@ h1,h2,h3{font-weight:400;line-height:1.05}
 .cover__rail span{display:block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,243,241,.72);font-variation-settings:'wdth' 100,'wght' 600}
 .cover__rail span b{font-variation-settings:'wdth' 100,'wght' 800;color:var(--chalk);font-weight:inherit}
 .cover__foot{position:relative;z-index:2;border-top:1px solid var(--rule);margin:.9rem var(--gut) 0;padding:.7rem 0 .85rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;justify-content:space-between}
+/* the phone column cannot hold these lines at wdth 116; narrow the axis
+   instead of shrinking the masthead */
+@media (max-width:560px){
+  .cover__lines h1{font-variation-settings:'wdth' 100,'wght' 800;letter-spacing:-.03em}
+}
 @media (max-width:820px){
   .cover__body{grid-template-columns:minmax(0,1fr);gap:1.4rem}
   .cover__rail{justify-items:start;text-align:left;border-top:1px solid var(--rule-soft);padding-top:.9rem}
