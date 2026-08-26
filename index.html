@@ -10,7 +10,7 @@
 <meta property="og:image" content="https://lelos-hair-boutique-demo.vercel.app/img/svc-occasion.jpg">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0C0B0B">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230C0B0B'/%3E%3Ctext x='32' y='45' font-family='Helvetica,Arial,sans-serif' font-weight='900' font-size='38' fill='%23F4F3F1' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230C0B0B'/%3E%3Cpath d='M20 14h7v29h17v7H20z' fill='%23C89A4E'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
@@ -177,19 +177,24 @@ h1,h2,h3{font-weight:400;line-height:1.05}
 .cover__plate::after{
   content:"";position:absolute;inset:0;
   background:
-    linear-gradient(180deg,rgba(12,11,11,.92) 0%,rgba(12,11,11,.42) 26%,rgba(12,11,11,.16) 46%,rgba(12,11,11,.82) 84%,rgba(12,11,11,.96) 100%),
-    linear-gradient(90deg,rgba(12,11,11,.76) 0%,rgba(12,11,11,.22) 44%,rgba(12,11,11,0) 68%);
+    linear-gradient(180deg,rgba(12,11,11,.55) 0%,rgba(12,11,11,.22) 30%,rgba(12,11,11,.10) 48%,rgba(12,11,11,.80) 84%,rgba(12,11,11,.96) 100%),
+    linear-gradient(90deg,rgba(12,11,11,.72) 0%,rgba(12,11,11,.20) 46%,rgba(12,11,11,0) 70%);
 }
 .cover__in{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:1.6rem;padding:calc(3.7rem + 1.4vw) var(--gut) 1.2rem}
-.cover__mast{width:min(330px,44vw);margin-inline:auto;flex:none}
+.cover__mast{width:min(330px,44vw);margin-inline:auto;flex:none;position:relative}
+/* the gold lockup is the palest thing on the page, so it gets its own ground */
+.cover__mast::before{
+  content:"";position:absolute;inset:-22% -30%;z-index:-1;
+  background:radial-gradient(ellipse at center,rgba(12,11,11,.62) 0%,rgba(12,11,11,.34) 48%,rgba(12,11,11,0) 74%);
+}
 .cover__mast img{width:100%;height:auto}
 .cover__body{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:end;margin-top:auto}
 .cover__lines h1,.cover__lines .cover__sub{max-width:34ch}
 .cover__lines h1{
   font-variation-settings:'wdth' 116,'wght' 800;
   text-transform:uppercase;
-  font-size:clamp(1.85rem,4.6vw,3.4rem);
-  line-height:.92;letter-spacing:-.03em;
+  font-size:clamp(2.6rem,6.2vw,5.4rem);
+  line-height:.9;letter-spacing:-.035em;
   text-wrap:balance;
 }
 .cover__lines h1 span{display:block}
@@ -204,7 +209,7 @@ h1,h2,h3{font-weight:400;line-height:1.05}
   .cover__body{grid-template-columns:minmax(0,1fr);gap:1.4rem}
   .cover__rail{justify-items:start;text-align:left;border-top:1px solid var(--rule-soft);padding-top:.9rem}
   .cover__mast{width:min(210px,50vw);margin-inline:0}
-  .cover__plate img{object-position:60% 22%}
+  .cover__plate img{object-position:52% 30%}
 }
 @media (max-width:600px){
   .cover__foot{flex-direction:column;gap:.35rem}
@@ -217,7 +222,7 @@ h1,h2,h3{font-weight:400;line-height:1.05}
 .paper .rule{background:var(--paper-rule)}
 .head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,44ch);gap:clamp(1.2rem,4vw,3.5rem);align-items:end;padding-bottom:1.3rem;border-bottom:1px solid var(--rule)}
 .paper .head{border-bottom-color:var(--paper-rule)}
-.head h2{font-variation-settings:'wdth' 118,'wght' 800;text-transform:uppercase;font-size:clamp(1.9rem,5vw,3.5rem);letter-spacing:-.03em;line-height:.94}
+.head h2{font-variation-settings:'wdth' 118,'wght' 800;text-transform:uppercase;font-size:clamp(2.4rem,5.6vw,4.6rem);letter-spacing:-.035em;line-height:.92}
 .head p{font-size:clamp(.96rem,.35vw + .88rem,1.06rem);color:var(--chalk-dim);line-height:1.55}
 .paper .head p{color:var(--paper-dim)}
 @media (max-width:800px){.head{grid-template-columns:1fr;align-items:start;gap:1rem}}
@@ -261,7 +266,7 @@ h1,h2,h3{font-weight:400;line-height:1.05}
 /* ---- AWARD ---- */
 .award{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(1.6rem,4vw,3.6rem);align-items:center}
 .award .plate{aspect-ratio:4/5}
-.award h2{font-variation-settings:'wdth' 116,'wght' 800;text-transform:uppercase;font-size:clamp(1.75rem,4.4vw,3rem);letter-spacing:-.03em;line-height:.96;margin:.9rem 0 1rem}
+.award h2{font-variation-settings:'wdth' 116,'wght' 800;text-transform:uppercase;font-size:clamp(2.2rem,4.8vw,3.8rem);letter-spacing:-.035em;line-height:.94;margin:0 0 1rem}
 @media (max-width:800px){.award{grid-template-columns:1fr}}
 
 /* ---- CONTENTS (services) ---- */
@@ -321,7 +326,7 @@ h1,h2,h3{font-weight:400;line-height:1.05}
 
 /* ---- COLOPHON (booking) ---- */
 .colo{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(1.8rem,5vw,4.5rem);align-items:start}
-.colo h2{font-variation-settings:'wdth' 118,'wght' 800;text-transform:uppercase;font-size:clamp(2rem,5.4vw,3.8rem);letter-spacing:-.03em;line-height:.92}
+.colo h2{font-variation-settings:'wdth' 118,'wght' 800;text-transform:uppercase;font-size:clamp(2.6rem,6vw,5.4rem);letter-spacing:-.035em;line-height:.9}
 .colo__meta{list-style:none;margin-top:2rem;border-top:1px solid var(--rule)}
 .colo__meta li{display:grid;grid-template-columns:minmax(0,8rem) minmax(0,1fr);gap:1rem;padding:.95rem 0;border-bottom:1px solid var(--rule-soft);align-items:baseline}
 .colo__meta dt,.colo__meta li>span:first-child{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--chalk-dim);font-variation-settings:'wdth' 100,'wght' 600}
@@ -329,7 +334,7 @@ h1,h2,h3{font-weight:400;line-height:1.05}
 .colo__box{border:1px solid var(--rule);padding:clamp(1.4rem,3vw,2.1rem)}
 .colo__box h3{font-variation-settings:'wdth' 112,'wght' 700;text-transform:uppercase;font-size:1.15rem;letter-spacing:-.01em;margin-bottom:.5rem}
 .colo__box .act{width:100%;justify-content:center;margin-top:.8rem}
-.colo__box small{display:block;margin-top:1rem;font-size:.78rem;color:var(--chalk-dim);line-height:1.5}
+.colo__box small{display:block;margin-top:1rem;font-size:.8rem;color:var(--chalk-dim);line-height:1.5}
 .soc{display:flex;gap:.6rem;margin-top:1.6rem}
 .soc a{width:46px;height:46px;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;color:var(--chalk);transition:background .25s,color .25s,border-color .25s}
 .soc a:hover{background:var(--chalk);color:var(--ink);border-color:var(--chalk)}
@@ -347,13 +352,13 @@ h1,h2,h3{font-weight:400;line-height:1.05}
 .foot__links{display:flex;flex-wrap:wrap;gap:1.4rem}
 .foot__links a{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--chalk-dim);font-variation-settings:'wdth' 100,'wght' 600}
 .foot__links a:hover{color:var(--chalk)}
-.foot__fine{margin-top:1.6rem;padding-top:1.2rem;border-top:1px solid var(--rule-soft);font-size:.76rem;color:rgba(244,243,241,.45);line-height:1.6}
+.foot__fine{margin-top:1.6rem;padding-top:1.2rem;border-top:1px solid var(--rule-soft);font-size:.78rem;color:var(--chalk-dim);line-height:1.6}
 
 /* ---- one authored motion: the page turn ---- */
-.motion .plate,
-.motion .cover__plate img{will-change:clip-path}
-.motion .plate{clip-path:inset(0 100% 0 0);transition:clip-path 1.05s var(--ease)}
-.motion .plate.in{clip-path:inset(0 0 0 0)}
+/* the page turn is one authored moment and it belongs to the opener plate;
+   everything else arrives quietly so the wipe still means something */
+.motion .plate.opener{clip-path:inset(0 100% 0 0);transition:clip-path 1.15s var(--ease);will-change:clip-path}
+.motion .plate.opener.in{clip-path:inset(0 0 0 0)}
 .motion .beat{opacity:0;transform:translateY(12px);transition:opacity .7s var(--ease) .22s,transform .7s var(--ease) .22s}
 .motion .beat.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
@@ -390,7 +395,6 @@ h1,h2,h3{font-weight:400;line-height:1.05}
     <a href="#work">Work</a>
     <a href="#services">Services</a>
     <a href="#stylist">The Stylist</a>
-    <a href="#letters">Reviews</a>
     <a href="#book">Visit</a>
   </nav>
   <a class="top__call" href="tel:+6421484948">
@@ -409,7 +413,6 @@ h1,h2,h3{font-weight:400;line-height:1.05}
   <a class="d-link" href="#work">Work</a>
   <a class="d-link" href="#services">Services</a>
   <a class="d-link" href="#stylist">The Stylist</a>
-  <a class="d-link" href="#letters">Reviews</a>
   <a class="d-link" href="#book">Visit</a>
   <a class="act" href="tel:+6421484948">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -464,45 +467,47 @@ h1,h2,h3{font-weight:400;line-height:1.05}
 
   <div class="well">
 
-    <div class="well__wide">
-      <figure class="plate opener"><img src="img/hero-1.jpg" alt="Long blonde curls with lived-in balayage, photographed against the flowering garden wall outside the studio" width="1900" height="1069" fetchpriority="low" decoding="async"></figure>
+    <figure class="well__wide">
+      <div class="plate opener"><img src="img/hero-1.jpg" alt="Long blonde curls with lived-in balayage, photographed against the flowering garden wall outside the studio" width="1900" height="1069" fetchpriority="low" decoding="async"></div>
       <figcaption class="cap beat"><span class="cap__n">Colour</span><span class="cap__t">Lived-in blonde, curled out and shot against the garden wall the studio backs onto. Depth kept through the root so it grows out soft instead of banding.</span></figcaption>
-    </div>
+    </figure>
 
     <div class="col">
       <div class="well__two">
-        <div>
-          <figure class="plate"><img src="img/work-1.jpg" alt="Half-up bridal style dressed with dried flowers" width="900" height="1125" loading="lazy" decoding="async"></figure>
+        <figure>
+          <div class="plate"><img src="img/work-1.jpg" alt="Half-up bridal style dressed with dried flowers" width="900" height="1125" loading="lazy" decoding="async"></div>
           <figcaption class="cap beat"><span class="cap__n">Bridal</span><span class="cap__t">Half-up bridal, dressed with dried flowers.</span></figcaption>
-        </div>
-        <div>
-          <figure class="plate"><img src="img/work-2.jpg" alt="Low bridal updo finished at the styling bench" width="900" height="1125" loading="lazy" decoding="async"></figure>
+        </figure>
+        <figure>
+          <div class="plate"><img src="img/work-2.jpg" alt="Low bridal updo finished at the styling bench" width="900" height="1125" loading="lazy" decoding="async"></div>
           <figcaption class="cap beat"><span class="cap__n">Occasion</span><span class="cap__t">Low occasion updo, pinned to hold all night.</span></figcaption>
-        </div>
+        </figure>
       </div>
     </div>
 
     <div class="col">
       <div class="well__off">
-        <figure class="plate"><img src="img/work-4.jpg" alt="Bridal party hair being styled on the morning of the wedding" width="900" height="1125" loading="lazy" decoding="async"></figure>
-        <div class="note beat">
+        <figure>
+          <div class="plate"><img src="img/work-4.jpg" alt="Bridal party hair being styled on the morning of the wedding" width="900" height="1125" loading="lazy" decoding="async"></div>
+          <figcaption class="cap beat"><span class="cap__n">Bridal</span><span class="cap__t">Wedding morning, bridal party styling.</span></figcaption>
+        </figure>
+        <div class="note">
           <h3>Whole bridal<br>parties, on site</h3>
           <p class="say">Brides, bridesmaids and mothers of the bride are styled here at the studio on the morning, one after another, so nobody is driving across town with their hair half done.</p>
-          <figcaption class="cap" style="margin-top:1.1rem"><span class="cap__n">Bridal</span><span class="cap__t">Wedding morning, bridal party styling.</span></figcaption>
         </div>
       </div>
     </div>
 
     <div class="col">
       <div class="well__two">
-        <div>
-          <figure class="plate"><img src="img/work-3.jpg" alt="Long brunette balayage brushed out against the studio's floral wall" width="900" height="1125" loading="lazy" decoding="async"></figure>
+        <figure>
+          <div class="plate"><img src="img/work-3.jpg" alt="Long brunette balayage brushed out against the studio's floral wall" width="900" height="1125" loading="lazy" decoding="async"></div>
           <figcaption class="cap beat"><span class="cap__n">Colour</span><span class="cap__t">Brunette balayage, brushed out at the bench.</span></figcaption>
-        </div>
-        <div>
-          <figure class="plate"><img src="img/work-5.jpg" alt="Occasion styling finished in the salon lounge" width="900" height="1125" loading="lazy" decoding="async"></figure>
+        </figure>
+        <figure>
+          <div class="plate"><img src="img/work-5.jpg" alt="Occasion styling finished in the salon lounge" width="900" height="1125" loading="lazy" decoding="async"></div>
           <figcaption class="cap beat"><span class="cap__n">Occasion</span><span class="cap__t">Occasion styling, finished in the lounge.</span></figcaption>
-        </div>
+        </figure>
       </div>
     </div>
 
@@ -513,11 +518,10 @@ h1,h2,h3{font-weight:400;line-height:1.05}
 <section class="sec sec--tight">
   <div class="col">
     <div class="award">
-      <figure class="plate"><img src="img/work-6.jpg" alt="Three NZARH winner trophies on the timber bench in the salon, engraved with the event, category, region and year" width="900" height="1125" loading="lazy" decoding="async"></figure>
-      <div class="beat">
-        <span class="lbl">On the shelf</span>
+      <div class="plate"><img src="img/work-6.jpg" alt="Three NZARH winner trophies on the timber bench in the salon, engraved with the event, category, region and year" width="900" height="1125" loading="lazy" decoding="async"></div>
+      <div>
         <h2>The trophies<br>are real</h2>
-        <p class="say">Three NZARH wins, sitting on the bench in the studio. They are engraved, you are welcome to pick them up, and they say this:</p>
+        <p class="say">Three NZARH wins, sitting on the bench in the studio. As best we can read the engraving, they say this:</p>
         <ul class="facts" style="margin-top:1.4rem">
           <li><span>2016</span><span>Hair by Night Live Event, New Generation Stylist, Canterbury and Westland</span></li>
           <li><span>2016</span><span>The Day Style Live Event, New Generation Stylist, Canterbury and Westland</span></li>
@@ -546,7 +550,7 @@ h1,h2,h3{font-weight:400;line-height:1.05}
       <article class="entry">
         <span class="entry__thumb"><img src="img/svc-occasion.jpg" alt="Bridal updo being set with a veil" width="1200" height="2136" loading="lazy"></span>
         <h3>Wedding &amp; occasion</h3>
-        <p>Bridal and event styling for you or the whole party, done on site at the studio on the morning. Trials available before the day.</p>
+        <p>Bridal and event styling for you or the whole party, done on site at the studio on the morning of the day.</p>
       </article>
       <article class="entry">
         <span class="entry__thumb"><img src="img/svc-womens.jpg" alt="Blonde balayage finished and styled in the salon chair" width="1100" height="825" loading="lazy"></span>
@@ -556,7 +560,7 @@ h1,h2,h3{font-weight:400;line-height:1.05}
       <article class="entry">
         <span class="entry__thumb"><img src="img/svc-treatments.jpg" alt="Glossy blonde waves after a treatment" width="1200" height="1200" loading="lazy"></span>
         <h3>Treatments</h3>
-        <p>Deep conditioning and bond repair for hair that has been coloured, heat styled or simply had a hard year.</p>
+        <p>Deep conditioning and repair for hair that has been coloured, heat styled or simply had a hard year.</p>
       </article>
       <article class="entry">
         <span class="entry__thumb"><img src="img/svc-blowdry.jpg" alt="A fresh blow wave finished in the salon cape" width="1100" height="825" loading="lazy"></span>
@@ -566,7 +570,7 @@ h1,h2,h3{font-weight:400;line-height:1.05}
       <article class="entry">
         <span class="entry__thumb"><img src="img/svc-mens.jpg" alt="The styling chair and mirror inside the garden salon" width="1200" height="800" loading="lazy"></span>
         <h3>Men's cut</h3>
-        <p>Tidy, sharp and unrushed. You get the same appointment length as everyone else, because there is only one chair.</p>
+        <p>Tidy, sharp and unrushed, because there is only one chair to get through.</p>
       </article>
     </div>
 
@@ -578,16 +582,15 @@ h1,h2,h3{font-weight:400;line-height:1.05}
 <section class="sec" id="stylist">
   <div class="col">
     <div class="feature">
-      <figure class="plate"><img src="img/about-lelo.jpg" alt="Lelo in her garden salon on Royal Park Drive" width="1351" height="765" loading="lazy"></figure>
-      <div class="beat">
-        <span class="lbl">The stylist</span>
+      <div class="plate"><img src="img/about-lelo.jpg" alt="Lelo in her garden salon on Royal Park Drive" width="1351" height="765" loading="lazy"></div>
+      <div>
         <p class="pull" style="margin-top:1rem">There is no second chair, so there is nobody else to hand you to.</p>
         <p class="say">Lelo's Hair Boutique is a private garden studio in Parklands, not a high street salon. One stylist, one appointment at a time. The person who talks through your colour is the person who mixes it, applies it and finishes it.</p>
         <p class="say">It is a slower way to run a salon and it is the entire point. Nothing is rushed to free the chair for the next booking, because there is no next booking sitting in the room with you.</p>
         <ul class="facts">
           <li><span>Studio</span><span>105 Royal Park Drive, Parklands</span></li>
           <li><span>Hours</span><span>Open 7 days, 9am to 6pm</span></li>
-          <li><span>Weddings</span><span>Parties styled on site, trials by arrangement</span></li>
+          <li><span>Weddings</span><span>Bridal parties styled on site</span></li>
           <li><span>Booking</span><span>By phone or email, no online system</span></li>
         </ul>
       </div>
@@ -598,10 +601,10 @@ h1,h2,h3{font-weight:400;line-height:1.05}
 <!-- ================= THE ROOM ================= -->
 <section class="sec sec--tight">
   <div class="well">
-    <div class="well__wide">
-      <figure class="plate room"><img src="img/hero-3.jpg" alt="Inside the garden studio: a single styling chair and round mirror, the basin on a timber bench, plants throughout, and a window opening onto the garden" width="1900" height="1069" loading="lazy" decoding="async"></figure>
+    <figure class="well__wide">
+      <div class="plate room"><img src="img/hero-3.jpg" alt="Inside the garden studio: a single styling chair and round mirror, the basin on a timber bench, plants throughout, and a window opening onto the garden" width="1900" height="1069" loading="lazy" decoding="async"></div>
       <figcaption class="cap beat"><span class="cap__n">The room</span><span class="cap__t">The studio on Royal Park Drive. One chair, one basin, the garden through the window, and nobody else booked in while you are sitting in it.</span></figcaption>
-    </div>
+    </figure>
   </div>
 </section>
 
@@ -665,7 +668,7 @@ h1,h2,h3{font-weight:400;line-height:1.05}
 
       <div class="colo__box">
         <h3>Book an appointment</h3>
-        <p class="say" style="font-size:.95rem">Fastest way in is a phone call. If she is mid colour she will pick up between clients.</p>
+        <p class="say" style="font-size:.95rem">A phone call is the fastest way in. If it goes to voicemail, leave a message and she will call back.</p>
         <a class="act" href="tel:+6421484948">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           021 484 948
@@ -745,14 +748,14 @@ h1,h2,h3{font-weight:400;line-height:1.05}
     document.querySelectorAll('.plate, .beat').forEach(function(el){ io.observe(el); });
   }
 
-  // email assembled at runtime so the address is never raw in the markup
+  // Address is assembled at runtime so it is never raw in the markup, but the
+  // link has to be mailto: — a Gmail compose URL sends anyone on iOS Mail,
+  // Outlook or a signed-out browser to a Google login wall instead.
   document.querySelectorAll('a[data-gmail]').forEach(function(a){
     var to = a.getAttribute('data-user') + '@' + a.getAttribute('data-domain');
-    a.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to) +
-             '&su=' + (a.getAttribute('data-su') || '') +
+    a.href = 'mailto:' + to +
+             '?subject=' + (a.getAttribute('data-su') || '') +
              '&body=' + (a.getAttribute('data-body') || '');
-    a.target = '_blank';
-    a.rel = 'noopener';
   });
 
   document.getElementById('yr').textContent = String(new Date().getFullYear());
