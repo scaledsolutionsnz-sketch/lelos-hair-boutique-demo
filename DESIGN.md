@@ -63,6 +63,62 @@ typography:
     letterSpacing: ".16em"
     fontVariation: "'wdth' 100, 'wght' 700"
     textTransform: "uppercase"
+  navLabel:
+    fontFamily: "Archivo, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: ".72rem"
+    letterSpacing: ".18em"
+    fontVariation: "'wdth' 100, 'wght' 600"
+    textTransform: "uppercase"
+  micro:
+    fontFamily: "Archivo, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: ".8rem"
+    lineHeight: 1.55
+    fontVariation: "'wdth' 100, 'wght' 400"
+  caption:
+    fontFamily: "Archivo, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: ".88rem"
+    lineHeight: 1.5
+    fontVariation: "'wdth' 100, 'wght' 400"
+  smallBody:
+    fontFamily: "Archivo, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: ".95rem"
+    lineHeight: 1.55
+    fontVariation: "'wdth' 100, 'wght' 400"
+  coverHeadline:
+    fontFamily: "Archivo, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: "clamp(2.6rem, 6.2vw, 5.4rem)"
+    lineHeight: 0.9
+    letterSpacing: "-.035em"
+    fontVariation: "'wdth' 116, 'wght' 800"
+    textTransform: "uppercase"
+  colophonHead:
+    fontFamily: "Archivo, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: "clamp(2.6rem, 6vw, 5.4rem)"
+    lineHeight: 0.9
+    letterSpacing: "-.035em"
+    fontVariation: "'wdth' 118, 'wght' 800"
+    textTransform: "uppercase"
+  drawerLink:
+    fontFamily: "Archivo, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: "clamp(1.7rem, 7vw, 2.6rem)"
+    lineHeight: 1.1
+    letterSpacing: "-.02em"
+    fontVariation: "'wdth' 112, 'wght' 700"
+    textTransform: "uppercase"
+  marginNote:
+    fontFamily: "Archivo, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: "clamp(1.3rem, 2.6vw, 2rem)"
+    lineHeight: 1.02
+    letterSpacing: "-.02em"
+    fontVariation: "'wdth' 112, 'wght' 700"
+    textTransform: "uppercase"
+  wordmark:
+    fontFamily: "Archivo, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: "clamp(1rem, 1.5vw, 1.24rem)"
+    lineHeight: 1
+    letterSpacing: "-.01em"
+    fontVariation: "'wdth' 118, 'wght' 800"
+    textTransform: "uppercase"
 spacing:
   gut: "clamp(20px, 4.4vw, 64px)"
   sec: "clamp(4.5rem, 9vw, 8rem)"
