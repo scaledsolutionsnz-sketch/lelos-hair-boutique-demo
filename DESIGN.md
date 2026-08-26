@@ -330,7 +330,7 @@ The one clipping device in the system is the opener plate's `clip-path: inset()`
 
 ### Plate and Caption (signature)
 - **Plate:** an aspect-ratio box on plate ink with an `object-fit: cover` image and a per-subject `object-position`. No border, no radius, no shadow. The image is the surface.
-- **Caption (`.cap`):** an auto/1fr baseline-aligned grid, `.85rem` below the plate. The category word sits in gold at `.68rem` / tracking .2em; the caption sentence runs at `.86rem` in dim text, capped at 56ch.
+- **Caption (`.cap`):** an auto/1fr baseline-aligned grid, `.85rem` below the plate. The category word sits in gold at `.68rem` / tracking .2em; the caption sentence runs at `.88rem` in dim text, capped at 56ch.
 
 ### Contents Entry (services, signature)
 - **Character:** a magazine contents line, not a service card.
